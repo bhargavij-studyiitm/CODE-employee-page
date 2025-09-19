@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<section  id="home" class="hero-banner">
+  <img src="{{ url_for('static', filename='images/hero-banner.png') }}" alt="Banner">
+</section>
+
+
+
+<section id="about" class="about-section">
+  <div class="about-wrapper">
+    <!-- Maroon rectangle -->
+    <div class="about-accent"></div>
+
+    <!-- Image -->
+    <div class="about-image">
+      <img src="{{ url_for('static', filename='images/teamwork.png') }}" alt="About CODE">
+    </div>
+
+    <!-- About Text -->
+    <div class="about-text">
+      <h2>About</h2>
+      <p>
+        Centre for Outreach and Digital Education (CODE) is the centre which coordinates all 
+        non-campus academic & outreach activities from IIT Madras. This was formerly called 
+        Centre for Continuing Education (CCE) started in 1986.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="coordinator" class="section-title">
+  <h2><span class="highlight">COURSE</span> COORDINATOR</h2>
+</section>
+
+<section class="employees">
+  <div class="container">
+    <!-- Employee 1 -->
+    <div class="employee-card">
+      <img src="{{ url_for('static', filename='images/andrew.jpg') }}" alt="Andrew Thangaraj">
+      <h3>Andrew Thangaraj</h3>
+      <p style="color: black;">Chair CODE</p>
+      <p>IIT Madras</p>
+      <!-- data-employee must match the key in employeeData below -->
+      <a href="#" class="view-profile" data-employee="andrew">
+        <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+        View Profile
+      </a>
+
+    </div>
+
+    <!-- Employee 2 -->
+    <div class="employee-card">
+      <img src="{{ url_for('static', filename='images/andrew.jpg') }}" alt="Jane Smith">
+      <h3>Jane Smith</h3>
+      <p style="color: black;">Assistant Coordinator</p>
+      <p>IIT Madras</p>
+      <a href="#" class="view-profile" data-employee="jane">
+        <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+        View Profile
+      </a>
+    </div>
+
+    <!-- Add more employee cards: set data-employee="your_key" -->
+  </div>
+</section>
+
+<div id="employeeModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-content" role="document">
+    <!-- Close button -->
+    <button class="modal-close" aria-label="Close modal">&times;</button>
+
+    <!-- Quote icon -->
+    <img class="quote-img" src="{{ url_for('static', filename='images/Quote.svg') }}" alt="Quote mark" />
+
+    <img class="arrow-img" src="{{ url_for('static', filename='images/arrow-circle.svg') }}" alt="Arrow circle" />
+
+    <!-- Main body wrapper -->
+    <div class="modal-body">
+      <div class="profile-container">
+        <!-- Left: Profile image -->
+        <div class="profile-img">
+          <img id="modalImage" src="" alt="Employee photo">
+        </div>
+
+        <!-- Right: Text content -->
+        <div class="profile-text">
+          <!-- remove ❝ since we now use the SVG -->
+          <h2 id="modalName"></h2>
+          <p class="role" id="modalRole"></p>
+          <p id="modalDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer badge -->
+    <div class="modal-footer">
+      <h3 id="modalBadgeName"></h3>
+      <p id="modalBadgeRole"></p>
+    </div>
+  </div>
+</div>
+
+
+
+<footer id="contact" class="contact-section">
+  <div class="contact-header">
+    Contact Us
+  </div>
+
+  <div class="contact-container">
+    <!-- Left: Address -->
+    <div class="contact-box">
+      <p>
+        Centre for Outreach and Digital Education (CODE)<br>
+        3rd Floor, IC & SR Building,<br>
+        IIT Madras, Chennai - 600 036.
+      </p>
+    </div>
+
+    <!-- Right: Contact Info -->
+    <div class="contact-box">
+      <p>
+        <img src="{{ url_for('static', filename='images/call.svg') }}" alt="Call" class="icon">
+        +91 (44) 2257 4900, +91 (44) 2257 4904
+      </p>
+      <p>
+        <img src="{{ url_for('static', filename='images/mail.svg') }}" alt="Email" class="icon">
+        office@code.iitm.ac.in
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Social + Copyright -->
+  <div class="contact-bottom">
+    <div class="social-icons">
+      <a href="#"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"></a>
+      <a href="#"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter"></a>
+      <a href="#"><img src="{{ url_for('static', filename='images/youtube.png') }}" alt="YouTube"></a>
+      <a href="#"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn"></a>
+      <a href="#"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></a>
+    </div>
+
+    <p class="copyright">
+      © 2022 IIT Madras - All rights reserved | Design for Centre for Outreach and Digital Education (CODE)
+    </p>
+  </div>
+</footer>
+
+<script>
+  // employee data: image URLs resolved via Flask url_for (Jinja)
+  const employeeData = {
+    "andrew": {
+      name: "Andrew Thangaraj",
+      role: "Chair CODE, IIT Madras",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet enim id felis lacinia, a finibus nisl ultrices. Nam sem neque, laoreet vel turpis sit amet, rutrum tempus nunc. Fusce iaculis auctor velit, et lacinia ex eleifend ac. Nunc non iaculis tortor. In vitae ligula non massa pulvinar eleifend. Aliquam interdum felis eu orci auctor posuere. Nullam ullamcorper lacinia nulla, sit amet pharetra sem eleifend quis. ",
+      image: "{{ url_for('static', filename='images/andrew.jpg') }}"
+    },
+    "jane": {
+      name: "Jane Smith",
+      role: "Assistant Coordinator, CODE",
+      desc: "Jane Smith supports course coordination and outreach. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.",
+      image: "{{ url_for('static', filename='images/andrew.jpg') }}"
+    }
+    // Add more entries here with keys matching data-employee attributes.
+  };
+
+  // helper: open modal and populate
+  function openModalById(id) {
+    const data = employeeData[id];
+    if (!data) {
+      console.warn("No employee data for:", id);
+      return;
+    }
+
+    // Removed modalName and modalRole updates
+    document.getElementById("modalDesc").innerText = data.desc;
+    document.getElementById("modalImage").src = data.image;
+
+    // Footer now holds name + role
+    document.getElementById("modalBadgeName").innerText = data.name;
+    document.getElementById("modalBadgeRole").innerText = data.role;
+
+    const modal = document.getElementById("employeeModal");
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    // trap focus or set focus to close for accessibility
+    document.querySelector(".modal-close").focus();
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("employeeModal");
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+  }
+
+  // Attach event listeners after DOM loads
+  document.addEventListener("DOMContentLoaded", function () {
+
+    // attach click handlers to all view-profile links
+    document.querySelectorAll(".view-profile").forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        const id = el.getAttribute("data-employee");
+        if (id) {
+          openModalById(id);
+        }
+      });
+    });
+
+    // close button
+    const closeBtn = document.querySelector(".modal-close");
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+    // click outside modal-content closes modal
+    const modal = document.getElementById("employeeModal");
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) closeModal();
+    });
+
+    // ESC closes modal
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeModal();
+    });
+  });
+</script>
+
+
+{% endblock %}
