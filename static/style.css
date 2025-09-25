@@ -7,6 +7,8 @@ body {
 }
 
 
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -82,8 +84,8 @@ html {
 /* Logo itself */
 .logo-wrap {
   position: absolute;
-  top: 42px;   /* adjust based on alignment */
-  left: 162px;  /* adjust based on alignment */
+  top: 40px;   /* adjust based on alignment */
+  left: 161px;  /* adjust based on alignment */
   z-index: 2;  /* above background */
 }
 
@@ -169,30 +171,31 @@ html {
 /* Maroon rectangle */
 .about-accent {
   width: 70px;
-  height: 300px;
+  height: 250px;
   background: #6b1f1f;  /* maroon */
   border-radius: 0px 0px 0px 0px;
   position: relative;
   z-index: 1;
+  top: 10px;
 }
 
 /* Image slightly higher */
 .about-image {
   position: relative;
   margin-left: -30px;   /* overlap on accent */
-  margin-top: -20px;    /* lift image higher */
+  margin-top: -30px;    /* lift image higher */
   z-index: 2;
 }
 
 .about-image img {
-  width: 400px;
+  width: 410px;
   border-radius: 20px 20px 20px 20px; /* curved top */
   display: block;
 }
 
 /* About text lower */
 .about-text {
-  background: white;
+  background: rgb(255, 255, 255);
   position: relative;
   border-radius: 20px 20px 20px 20px;
   padding: 30px;
@@ -200,7 +203,7 @@ html {
   margin-top:100px;     /* push text lower than image */
   max-width: 500px;
   z-index: 3;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.08);
 }
 
 .about-text h2 {
@@ -239,14 +242,26 @@ html {
   border-radius: 6px;
 }
 
-
-/* Highlighted first word */
-.section-title .highlight {
-  color: #7a2017;        /* brown */
-  font-weight: 700;      /* bold */
+.section-title span {
+  color:#8B4513 ;
+  font-weight: 700  
 }
 
+.section-title h2 {
+    font-size: 2rem; /* Or your desired size */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+.code-highlight {
+    color: #8B4513 !important;  /* A solid brown color */
+    font-weight: 700;   /* Bold weight */
+}
+
+.team-normal {
+    color: #888888 !important;      /* A light grey color */
+    font-weight: 300 !important;   /* Thin/light weight */
+}
 
 
 /* Employee Section */
@@ -259,7 +274,7 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
-  max-width: 1100px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -283,7 +298,7 @@ html {
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 15px; /* beige border around photo */
+  margin-bottom: 20px; /* beige border around photo */
 }
 
 .employee-card h3 {
@@ -416,6 +431,20 @@ html {
   display: flex;
   gap: 25px;
   align-items: center;
+}
+
+.grey-quote-img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 30px !important;      /* Force it to be small */
+  height: auto !important;     /* Maintain the correct shape */
+  border-radius: 0 !important; /* REMOVE the circle shape */
+
+  object-fit: contain;
+  z-index: 1000;
+  pointer-events: none;
 }
 
 .quote-img {
@@ -564,7 +593,7 @@ html {
 }
 
 .contact-box {
-  background: #f2f2f2;
+  background: #dfd7d7;
   padding: 20px;
   border-radius: 12px;
   flex: 1;
@@ -572,6 +601,285 @@ html {
   font-size: 15px;
   line-height: 1.5;
 }
+
+.team-layout-container {
+  /* This is the key property that creates the side-by-side layout! */
+  display: flex;
+
+  /* Optional: Adds some space between the sidebar and the cards */
+  gap: 30px; 
+  align-items: flex-start; 
+  /* Optional: Ensures the layout has some padding from the screen edges */
+  padding: 20px;
+  max-width: 1400px; /* Or your preferred max width */
+  margin: 0 auto; /* Centers the layout container */
+}
+
+.employee-sidebar {
+  /* Give the sidebar a fixed width and prevent it from shrinking */
+  flex-shrink: 0;
+  width: 250px; 
+  position: sticky;
+  top: 20px; /* The distance from the top where it will "stick" when you scroll */
+  align-self: flex-start; /* Crucial for making sticky work inside a flex container */
+}
+
+.employee-grid-container {
+  /* This makes the main content area take up all the remaining available space */
+  flex-grow: 1; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* If you have multiple cards, this will arrange them in a responsive grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px
+}
+
+
+/* Sidebar (CODE TEAM) -------------------------------------------------- */
+
+.employee-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  background: #f2f2f2;   /* grey background outside */
+  padding: 40px 30px;    /* breathing space */
+}
+
+.employee-sidebar {
+  width: 220px;                  /* fixed width */
+  background: #ffffff;           /* white container */
+  border: 1px solid #ddd;        /* subtle border */
+  border-radius: 8px;            /* rounded edges */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-family: "Roboto", sans-serif;
+  color: #3b2b26;
+  overflow: hidden;
+}
+
+
+/* inner padding kept inside sections */
+.employee-sidebar .sidebar-inner {
+  display: block;
+}
+
+/* Header: "CODE TEAM" */
+.employee-sidebar .sidebar-header {
+  background: #f3e5d6;         /* header beige slightly different */
+  padding: 16px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  border-bottom: 1px solid #e6e0d9;
+}
+
+.employee-sidebar .sidebar-header .code {
+  color: #7a2017;             /* maroon color */
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.employee-sidebar .sidebar-header .team {
+  color: #8b807b;             /* muted gray */
+  font-weight: 200;
+  font-size: 21px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Choose row (clickable) */
+.employee-sidebar .choose-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  background: #e3e6e9;         /* white band */
+  border-bottom: 1px solid #ececec;
+  cursor: pointer;
+}
+.employee-sidebar .choose-row .choose-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3b2b26;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  align-items: center !important ;
+}
+
+/* caret circle on the right */
+.employee-sidebar .choose-row .caret {
+  content: url("{{ url_for('static', filename='arrow-circle.svg') }}");
+}
+
+/* List */
+.employee-sidebar .sidebar-list {
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  max-height: calc(100vh - 260px);   /* keep sidebar scrollable if long */
+  overflow-y: auto;
+  background-color: white;
+}
+
+/* each list row */
+.employee-sidebar .sidebar-list .list-item {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #3b2b26;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+  position: relative; /* needed for ::after */
+}
+
+.employee-sidebar .sidebar-list .list-item::after {
+  content: "";
+  position: absolute;
+  left: 16px;         /* indent from left */
+  right: 16px;        /* indent from right */
+  bottom: 0;
+  height: 1px;
+  background-color: #eee;
+}
+
+
+.employee-profile-card {
+    background: #ffffff;
+    border: 2px solid #8a8181;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Ensures the child elements conform to the border-radius */
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
+    flex-direction: column;
+    box-sizing: border-box !important;
+}
+
+.employee-profile-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Adds a bigger, softer shadow */
+}
+
+
+/* --- Top Section (White) --- */
+.card-top-section {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box; /* Fixes the children */
+    width: 100%; /* Ensures they fill the parent correctly */
+}
+
+.profile-image-wrapper {
+    /* This wrapper creates the outer, thin grey border */
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    padding: 4px; /* Space between outer and inner border */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.profile-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    /* This creates the inner, thicker beige border */
+    border: 5px solid #e6dcd1;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info {
+    margin-left: 24px;
+    flex-grow: 1;
+}
+
+.employee-name {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500;
+    color: #2c2c2c;
+    margin: 0 0 4px 0;
+}
+
+.employee-title {
+    font-size: 1rem; /* 16px */
+    color: #000000;
+    margin: 0;
+}
+
+.info-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    width: 40%; /* Matches the image's short line */
+    margin: 16px 0;
+}
+
+.view-profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0095D5; /* A vibrant blue for the link */
+    font-size: 0.95rem; /* 15px */
+    font-weight: 500;
+}
+
+.link-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* --- Bottom Section (Maroon) --- */
+.card-bottom-section {
+    background-color: #8a2c2d; /* Color picked from image */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    box-sizing: border-box; /* Fixes the children */
+    width: 100%; /* Ensures they fill the parent correctly */  
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+
+/* hovered row */
+.employee-sidebar .sidebar-list .list-item:hover {
+  background: #f7f7f7;
+  color: #7a2017;
+}
+
+/* active / highlighted row (Accounts in screenshot) */
+.employee-sidebar .sidebar-list .list-item.active {
+  background: #efefef;
+  color: #7a2017;
+  font-weight: 700;
+}
+
+/* scrollbar styling (modern browsers) */
+.employee-sidebar .sidebar-list::-webkit-scrollbar { width: 8px; }
+.employee-sidebar .sidebar-list::-webkit-scrollbar-track { background: transparent; }
+.employee-sidebar .sidebar-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); border-radius: 6px; }
+
+/* small responsive tweak */
+@media (max-width: 900px) {
+  .employee-sidebar { width: 200px; }
+  .employee-sidebar .sidebar-header .code { font-size: 16px; }
+  .employee-sidebar .sidebar-list .list-item { font-size: 12px; padding: 10px 12px; }
+}
+
+
+
+
+
+
 
 .contact-box img.icon {
   width: 30px;     /* size of the icon */
@@ -600,4 +908,196 @@ html {
   margin-top: 10px;
   font-size: 13px;
   color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+/* --- NEW TEAM MEMBER PROFILE MODAL STYLING --- */
+
+#profileDetailModal.profile-detail-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+#profileDetailModal.profile-detail-modal.open {
+    display: flex;
+}
+
+#profileDetailModal .profile-detail-modal-content {
+    background: #fdfdfd;
+    border-radius: 20px;
+    max-width: 900px;
+    width: 90%;
+    padding: 0;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    display: flex;
+    overflow: hidden;
+}
+
+#profileDetailModal .profile-detail-modal-close {
+    position: absolute;
+    top: 15px; right: 15px;
+    z-index: 1001;
+    background: #f0f0f0;
+    border: none;
+    color: #555;
+    font-size: 28px;
+    line-height: 1;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profileDetailModal .profile-detail-inner-layout {
+    display: flex;
+    width: 100%;
+}
+
+#profileDetailModal .profile-detail-left-panel {
+    flex: 0 0 350px;
+    background: #f3e1d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 25px;
+    box-sizing: border-box;
+}
+
+#profileDetailModal .profile-detail-profile-img {
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+#profileDetailModal .profile-detail-left-bottom {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-top: auto;
+    width: 100%;
+    max-width: 280px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#profileDetailModal .profile-detail-laptop-icon {
+    position: absolute;
+    top: -6px;
+    left: 230px;
+    transform: translateX(-50%);
+    width: 50px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#profileDetailModal .profile-detail-left-role-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #7a2017;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#profileDetailModal .profile-detail-left-role-desc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify !important;
+}
+
+#profileDetailModal .profile-detail-right-panel {
+    flex-grow: 1;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#profileDetailModal .profile-detail-right-header {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+#profileDetailModal .profile-detail-right-name {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #3b2b26;
+    margin: 0;
+}
+
+#profileDetailModal .profile-detail-right-title {
+    font-size: 1.3rem;
+    color: #7a2017;
+    margin: 8px 0 0;
+    font-weight: 400;
+}
+
+#profileDetailModal .profile-detail-stars-notes-icon {
+    position: absolute;
+    top: 0px; right: 0px;
+    width: 80px;
+    opacity: 0.7;
+}
+
+#profileDetailModal .profile-detail-right-divider {
+    height: 2px;
+    background: #e6dcd1;
+    width: 100%;
+    max-width: 400px;
+}
+
+#profileDetailModal .profile-detail-right-body {
+    margin-top: 30px;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+#profileDetailModal .profile-detail-about-you-header {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #3b2b26;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#profileDetailModal .profile-detail-arrow-circle-icon {
+    width: 25px;
+    height: 25px;
+}
+
+#profileDetailModal .profile-detail-right-desc {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
 }

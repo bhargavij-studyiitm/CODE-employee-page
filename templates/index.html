@@ -10,15 +10,12 @@
 
 <section id="about" class="about-section">
   <div class="about-wrapper">
-    <!-- Maroon rectangle -->
     <div class="about-accent"></div>
 
-    <!-- Image -->
     <div class="about-image">
       <img src="{{ url_for('static', filename='images/teamwork.png') }}" alt="About CODE">
     </div>
 
-    <!-- About Text -->
     <div class="about-text">
       <h2>About</h2>
       <p>
@@ -33,7 +30,9 @@
 
 
 <section id="coordinator" class="section-title">
+
   <h2><span class="highlight">COURSE</span> COORDINATOR</h2>
+
 </section>
 
 <section class="employees">
@@ -73,6 +72,8 @@
     <!-- Close button -->
     <button class="modal-close" aria-label="Close modal">&times;</button>
 
+    <img class="grey-quote-img" src="{{ url_for('static', filename='images/grey-quote.svg') }}" alt="Quote mark" />
+
     <!-- Quote icon -->
     <img class="quote-img" src="{{ url_for('static', filename='images/Quote.svg') }}" alt="Quote mark" />
 
@@ -95,17 +96,151 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer badge -->
     <div class="modal-footer">
       <h3 id="modalBadgeName"></h3>
       <p id="modalBadgeRole"></p>
     </div>
   </div>
 </div>
+<!---------------------------NO CHANGE UP ------------------------------------------------------->
 
 
 
+
+<div id="profileDetailModal" class="profile-detail-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="profile-detail-modal-content" role="document">
+    <button class="profile-detail-modal-close" aria-label="Close modal">&times;</button>
+
+    <div class="profile-detail-inner-layout">
+      <div class="profile-detail-left-panel">
+        <img id="profileModalImage" src="" alt="Employee photo" class="profile-detail-profile-img">
+        <div class="profile-detail-left-bottom">
+          <img src="{{ url_for('static', filename='images/laptop-icon.svg') }}" alt="Laptop icon" class="profile-detail-laptop-icon">
+          <p class="profile-detail-left-role-title">Interests</p>
+          <p id="profileModalLeftRoleDesc" class="profile-detail-left-role-desc"></p>
+        </div>
+      </div>
+
+      <div class="profile-detail-right-panel">
+        <div class="profile-detail-right-header">
+          <h2 id="profileModalName" class="profile-detail-right-name"></h2>
+          <p id="profileModalRole" class="profile-detail-right-title"></p>
+          <img src="{{ url_for('static', filename='images/stars-notes-icon.svg') }}" alt="Stars and Notes icon" class="profile-detail-stars-notes-icon">
+        </div>
+        <div class="profile-detail-right-divider"></div>
+        <div class="profile-detail-right-body">
+          <h3 class="profile-detail-about-you-header">
+            <img src="{{ url_for('static', filename='images/arrow-modal.svg') }}" alt="Arrow icon" class="profile-detail-arrow-circle-icon">
+            ROLE AT CODE
+          </h3>
+          <p id="profileModalDesc" class="profile-detail-right-desc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section id="codeteam" class="section-title">
+  <h2>
+    <span class="code-highlight">CODE</span>
+    <span class="team-normal">TEAM</span>
+  </h2>
+</section>
+
+
+<div class="team-layout-container">
+
+  <aside class="employee-sidebar" aria-label="CODE Team sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-header" role="heading" aria-level="3">
+        <span class="code">CODE</span>
+        <span class="team">TEAM</span>
+      </div>
+      <div class="choose-row" role="button" tabindex="0" aria-pressed="false">
+        <span class="choose-label">CHOOSE</span>
+        <button class="caret" aria-label="Open team list" title="Open team list">▾</button>
+      </div>
+      <ul class="sidebar-list" role="list">
+        <li class="list-item active" data-team="ALL" role="listitem">ALL</li>
+        <li class="list-item" data-team="Accounts - CODE/NPTEL" role="listitem">Accounts - CODE/NPTEL</li>
+        <li class="list-item" data-team="BS Degree Accounts" role="listitem">BS Degree Accounts</li>
+        <li class="list-item" data-team="CODE - Accounts" role="listitem">CODE - Accounts</li>
+        <li class="list-item" data-team="CODE Marketing" role="listitem">CODE Marketing</li>
+        <li class="list-item" data-team="CSR" role="listitem">CSR</li>
+        <li class="list-item" data-team="Code ex/workshops" role="listitem">Code ex/workshops</li>
+        <li class="list-item" data-team="Course Instructor" role="listitem">Course Instructor</li>
+        <li class="list-item" data-team="Design" role="listitem">Design</li>
+        <li class="list-item" data-team="Design - BS Degree" role="listitem">Design - BS Degree</li>
+        <li class="list-item" data-team="Dev" role="listitem">Dev</li>
+        <li class="list-item" data-team="Developer" role="listitem">Developer</li>
+        <li class="list-item" data-team="Exams + Soft skill" role="listitem">Exams + Soft skill</li>
+        <li class="list-item" data-team="GATE Team" role="listitem">GATE Team</li>
+        <li class="list-item" data-team="ICMAI" role="listitem">ICMAI</li>
+        <li class="list-item" data-team="IIC" role="listitem">IIC</li>
+        <li class="list-item" data-team="Internship" role="listitem">Internship</li>
+        <li class="list-item" data-team="LC + Exam" role="listitem">LC + Exam</li>
+        <li class="list-item" data-team="NPTEL" role="listitem">NPTEL</li>
+        <li class="list-item" data-team="NPTEL Support" role="listitem">NPTEL Support</li>
+        <li class="list-item" data-team="Outreach/Social Media" role="listitem">Outreach/Social Media</li>
+        <li class="list-item" data-team="POD Ops" role="listitem">POD Ops</li>
+        <li class="list-item" data-team="Portal" role="listitem">Portal</li>
+        <li class="list-item" data-team="QP" role="listitem">QP</li>
+        <li class="list-item" data-team="School Connect Team" role="listitem">School Connect Team</li>
+        <li class="list-item" data-team="Student affairs" role="listitem">Student affairs</li>
+        <li class="list-item" data-team="Studio Team" role="listitem">Studio Team</li>
+        <li class="list-item" data-team="Text / Translation" role="listitem">Text / Translation</li>
+        <li class="list-item" data-team="Text Transcription" role="listitem">Text Transcription</li>
+        <li class="list-item" data-team="Translation" role="listitem">Translation</li>
+        <li class="list-item" data-team="Web M.Tech" role="listitem">Web M.Tech</li>
+      </ul>
+    </div>
+  </aside>
+
+
+  <main class="employee-grid-container">
+    {% for emp in employees %}
+    <div class="employee-profile-card" data-team="{{ emp.team }}">
+      <div class="card-top-section">
+        <div class="profile-image-wrapper">
+          <img src="{{ emp.directPhotoURL }}" alt="{{ emp.fullName }}" class="profile-image">
+        </div>
+        <div class="profile-info">
+          <h2 class="employee-name">{{ emp.fullName }}</h2>
+          <p class="employee-title">{{ emp.designation }}, {{ emp.team }}</p>
+          <div class="info-divider"></div>
+          
+          <a href="#" class="view-profile-link"
+             data-name="{{ emp.fullName }}"
+             data-role="{{ emp.designation }}"
+             data-roledesc="{{ emp.interests }}"
+             data-desc="{{ emp.bio }}"
+             data-photo="{{ emp.directPhotoURL }}">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="link-icon">
+            <span>View profile</span>
+          </a>
+        </div>
+      </div>
+      <div class="card-bottom-section">
+        <div class="contact-item">
+        </div>
+        <div class="contact-item">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </main>
+</div>
+
+
+
+
+
+<!-------------------------------------NO CHANGE IN HTML BELOW THIS --------------------------->
+</div>  <!-- importantttt-->
 <footer id="contact" class="contact-section">
   <div class="contact-header">
     Contact Us
@@ -151,8 +286,16 @@
   </div>
 </footer>
 
+
+
+
+
+
+
+
+
 <script>
-  // employee data: image URLs resolved via Flask url_for (Jinja)
+
   const employeeData = {
     "andrew": {
       name: "Andrew Thangaraj",
@@ -166,10 +309,10 @@
       desc: "Jane Smith supports course coordination and outreach. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.",
       image: "{{ url_for('static', filename='images/andrew.jpg') }}"
     }
-    // Add more entries here with keys matching data-employee attributes.
+    // Add more entries 
   };
 
-  // helper: open modal and populate
+
   function openModalById(id) {
     const data = employeeData[id];
     if (!data) {
@@ -181,14 +324,14 @@
     document.getElementById("modalDesc").innerText = data.desc;
     document.getElementById("modalImage").src = data.image;
 
-    // Footer now holds name + role
+   
     document.getElementById("modalBadgeName").innerText = data.name;
     document.getElementById("modalBadgeRole").innerText = data.role;
 
     const modal = document.getElementById("employeeModal");
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
-    // trap focus or set focus to close for accessibility
+
     document.querySelector(".modal-close").focus();
   }
 
@@ -198,10 +341,10 @@
     modal.setAttribute("aria-hidden", "true");
   }
 
-  // Attach event listeners after DOM loads
+
   document.addEventListener("DOMContentLoaded", function () {
 
-    // attach click handlers to all view-profile links
+
     document.querySelectorAll(".view-profile").forEach(function (el) {
       el.addEventListener("click", function (e) {
         e.preventDefault();
@@ -212,21 +355,115 @@
       });
     });
 
-    // close button
+
     const closeBtn = document.querySelector(".modal-close");
     if (closeBtn) closeBtn.addEventListener("click", closeModal);
 
-    // click outside modal-content closes modal
+
     const modal = document.getElementById("employeeModal");
     modal.addEventListener("click", function (e) {
       if (e.target === modal) closeModal();
     });
 
-    // ESC closes modal
+
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeModal();
     });
   });
+
+
+
+
+ 
+document.addEventListener("DOMContentLoaded", function () {
+
+    // --- 1. TEAM MEMBER MODAL LOGIC ---
+
+    const profileModal = document.getElementById("profileDetailModal");
+    if (profileModal) {
+        const closeProfileBtn = profileModal.querySelector(".profile-detail-modal-close");
+
+        // Function to open the team member modal
+        function openProfileModal(data) {
+            document.getElementById("profileModalImage").src = data.photo;
+            document.getElementById("profileModalName").innerText = data.name;
+            document.getElementById("profileModalRole").innerText = data.role;
+            document.getElementById("profileModalLeftRoleDesc").innerText = data.roledesc;
+            document.getElementById("profileModalDesc").innerText = data.desc;
+            profileModal.classList.add("open");
+        }
+
+        // Function to close the team member modal
+        function closeProfileModal() {
+            profileModal.classList.remove("open");
+        }
+
+        document.querySelectorAll(".employee-profile-card .view-profile-link").forEach(link => {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const employeeData = {
+                    name: this.dataset.name,
+                    role: this.dataset.role,
+                    roledesc: this.dataset.roledesc,
+                    desc: this.dataset.desc,
+                    photo: this.dataset.photo
+                };
+                openProfileModal(employeeData);
+            });
+        });
+
+        // Event listeners for closing the modal
+        if (closeProfileBtn) {
+            closeProfileBtn.addEventListener("click", closeProfileModal);
+        }
+        profileModal.addEventListener("click", function (event) {
+            if (event.target === profileModal) {
+                closeProfileModal();
+            }
+        });
+    }
+  
+
+    const sidebarItems = document.querySelectorAll(".sidebar-list .list-item");
+    const employeeCards = document.querySelectorAll(".employee-profile-card");
+
+    sidebarItems.forEach(item => {
+        item.addEventListener("click", function () {
+            // Get the team to filter by from the clicked item's data attribute
+            const selectedTeam = this.getAttribute("data-team");
+
+            // Visually highlight the active filter
+            sidebarItems.forEach(i => i.classList.remove("active"));
+            this.classList.add("active");
+
+            // Show or hide employee cards based on the selected team
+            employeeCards.forEach(card => {
+                const cardTeam = card.getAttribute("data-team");
+                if (selectedTeam === "ALL" || cardTeam === selectedTeam) {
+                    card.style.display = "flex"; // Or "block" if you prefer
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+
+
+    
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            if (profileModal && profileModal.classList.contains("open")) {
+                closeProfileModal();
+            }
+            if (coordinatorModal && coordinatorModal.classList.contains("open")) {
+                closeCoordinatorModal();
+            }
+        }
+    });
+
+});
+
+
 </script>
 
 
