@@ -18,7 +18,8 @@ def get_employee_data():
 
         csv_data = response.text
 
-        reader = csv.DictReader(csv_data.splitlines())
+        reader = csv.DictReader(csv_data.splitlines()) #csv.DictReader(...)`: This is a powerful CSV parser that treats each row as a dictionary,
+        #   using the first row (headers like 'name', 'title', etc.) as the keys.
         
         for row in reader:
             if 'photoURL' in row and row['photoURL']:
@@ -49,9 +50,11 @@ def get_employee_data():
 @app.route('/')
 def home():
 
-    employees = get_employee_data()
+    employees_unsorted = get_employee_data()
+
+    employees = sorted(employees_unsorted, key=lambda emp: emp.get('fullName', ''))
     
-    return render_template('index.html', employees=employees)
+    return render_template('index.html', employees=employees) #passes employees to be used in html using jinja 2
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -10,6 +10,22 @@
 <body>
 
 
+  <nav id="mobile-nav-panel" class="mobile-nav-panel">
+    <div class="panel-header">
+      <button id="mobile-nav-close-btn" class="close-btn" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="panel-nav-list">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+      <li><a href="#coordinator">CO-ORDINATOR</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <div id="page-overlay" class="page-overlay"></div>
+
+
+
 <header class="main-header">
   <div class="header-top">
     <!-- Background wave image -->
@@ -28,16 +44,23 @@
     </div>
   </div>
 
-  <nav class="nav-bar">
-    <ul class="nav-list">
-      <li><a href="#home">HOME</a></li>
-      <li><a href="#about">ABOUT US</a></li>
-      <li><a href="#coordinator">CO-ORDINATOR</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="nav-bar">
+      <ul class="nav-list">
+        <li class="hide-on-mobile"><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#coordinator">CO-ORDINATOR</a></li>
+        <li><a href="#orgchartwrapper">CODE STRUCTURE</a></li>
+        <li><a href="#codeteam">EMPLOYEES</a></li>        
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
 
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+    </nav>
+  </header>
 
   <main>
     {% block content %}{% endblock %}

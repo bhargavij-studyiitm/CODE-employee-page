@@ -41,7 +41,7 @@
     <div class="employee-card">
       <img src="{{ url_for('static', filename='images/andrew.jpg') }}" alt="Andrew Thangaraj">
       <h3>Andrew Thangaraj</h3>
-      <p style="color: black;">Chair CODE</p>
+      <p style="color: black;">Chair , CODE</p>
       <p>IIT Madras</p>
       <!-- data-employee must match the key in employeeData below -->
       <a href="#" class="view-profile" data-employee="andrew">
@@ -53,11 +53,11 @@
 
     <!-- Employee 2 -->
     <div class="employee-card">
-      <img src="{{ url_for('static', filename='images/andrew.jpg') }}" alt="Jane Smith">
-      <h3>Jane Smith</h3>
-      <p style="color: black;">Assistant Coordinator</p>
+      <img src="{{ url_for('static', filename='images/vignesh.jpg') }}" alt="Jane Smith">
+      <h3>Vignesh Muthuvijayan</h3>
+      <p style="color: black;">Associate Chair , CODE</p>
       <p>IIT Madras</p>
-      <a href="#" class="view-profile" data-employee="jane">
+      <a href="#" class="view-profile" data-employee="vignesh">
         <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
         View Profile
       </a>
@@ -78,6 +78,8 @@
     <img class="quote-img" src="{{ url_for('static', filename='images/Quote.svg') }}" alt="Quote mark" />
 
     <img class="arrow-img" src="{{ url_for('static', filename='images/arrow-circle.svg') }}" alt="Arrow circle" />
+
+
 
     <!-- Main body wrapper -->
     <div class="modal-body">
@@ -103,6 +105,115 @@
   </div>
 </div>
 <!---------------------------NO CHANGE UP ------------------------------------------------------->
+
+
+
+<section id="orgchart" class="section-title">
+  <h2>
+    <span class="code-highlight">ORGANIZATION</span>
+    <span class="team-normal">CHART</span>
+  </h2>
+</section>
+
+
+<section id="orgchartwrapper" class="org-chart-wrapper">
+  <div class="org-chart">
+    <ul>
+      <li>
+        <div class="org-node node-top-level">
+          <img src="{{ url_for('static', filename='images/logo-main.png') }}" alt="CODE Logo">
+        </div>
+        <ul>
+          <li>
+            <div class="org-node node-department purple">
+              <span class="node-title">PROGRAMS</span>
+            </div>
+            <ul>
+              <li>
+                <div class="org-node node-team-logo">
+                  <img src="{{ url_for('static', filename='images/logo-bs-degree.png') }}" alt="IITM BS Degree Logo">
+                </div>
+                <ul class="vertical-list">
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="POD Ops">Support</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Portal">Portal</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Course Instructor">Instructors</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree Accounts">BS Accounts</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Design - BS Degree">BS Design</a></li>                  
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Student affairs">Student Affairs</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="org-node node-team-logo">
+                  <img src="{{ url_for('static', filename='images/logo-nptel.png') }}" alt="NPTEL Logo">
+                </div>
+                <ul class="vertical-list">
+                    <li><a href="#team-section" class="org-node node-subteam" data-team="NPTEL Support">NPTEL Support</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="org-node node-department teal">
+                    <span class="node-title">OTHER CODE PROGRAMS</span>
+                </div>
+                <ul class="vertical-list">
+                  <li><a href="#" class="org-node node-team-logo" data-team="School Connect Team"><img src="{{ url_for('static', filename='images/logo-school-connect.png') }}" alt="School Connect Logo"></a></li>
+                  <li><a href="#" class="org-node node-team-logo" data-team="ICMAI"><img src="{{ url_for('static', filename='images/logo-icmai.png') }}" alt="ICMAI Logo"></a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Web M.Tech">Web M.Tech</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="GATE Team">GATE Team</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Code ex/workshops">Workshops</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="org-node node-department purple">
+                <span class="node-title">FUNCTION</span>
+            </div>
+            <ul class="vertical-list">
+              <li><a href="#" class="org-node node-function" data-team="Design">Design</a></li>
+              <li><a href="#" class="org-node node-function" data-team="CODE - Accounts">Accounts</a></li>
+              <li><a href="#" class="org-node node-function" data-team="CODE Marketing">Marketing</a></li>
+              <li><a href="#" class="org-node node-function" data-team="QP">QP</a></li>
+              <li><a href="#" class="org-node node-function" data-team="Studio Team">Studio</a></li>
+              <li><a href="#" class="org-node node-function" data-team="CSR">CSR</a></li>
+              <li><a href="#" class="org-node node-function" data-team="Internship">Internship</a></li>
+              <li>
+                <div class="org-node sub-department">Exam</div>
+                <ul class="vertical-list">
+                    <li><a href="#team-section" class="org-node node-subteam" data-team="LC + Exam">LC + Exam</a></li>
+                    <li><a href="#team-section" class="org-node node-subteam" data-team="Exams + Soft skill">Soft Skills</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="org-node sub-department">Translation</div>
+                <ul class="vertical-list">
+                    <li><a href="#team-section" class="org-node node-subteam" data-team="Translation">Translation</a></li>
+                    <li><a href="#team-section" class="org-node node-subteam" data-team="Text Transcription">Transcription</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -152,9 +263,14 @@
 </section>
 
 
+<section class="current-team-display">
+  <h2 id="team-name-heading">All Employees</h2>
+</section>
+
+
 <div class="team-layout-container">
 
-  <aside class="employee-sidebar" aria-label="CODE Team sidebar">
+  <aside id="team-section" class="employee-sidebar" aria-label="CODE Team sidebar">
     <div class="sidebar-inner">
       <div class="sidebar-header" role="heading" aria-level="3">
         <span class="code">CODE</span>
@@ -200,6 +316,8 @@
     </div>
   </aside>
 
+
+ 
 
   <main class="employee-grid-container">
     {% for emp in employees %}
@@ -294,20 +412,52 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 
   const employeeData = {
     "andrew": {
       name: "Andrew Thangaraj",
       role: "Chair CODE, IIT Madras",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras laoreet enim id felis lacinia, a finibus nisl ultrices. Nam sem neque, laoreet vel turpis sit amet, rutrum tempus nunc. Fusce iaculis auctor velit, et lacinia ex eleifend ac. Nunc non iaculis tortor. In vitae ligula non massa pulvinar eleifend. Aliquam interdum felis eu orci auctor posuere. Nullam ullamcorper lacinia nulla, sit amet pharetra sem eleifend quis. ",
+      desc: "Prof. Andrew Thangaraj is a Professor in the Department of Electrical Engineering at IIT Madras and the Chair of the Centre for Outreach and Digital Education (CODE). He leads IIT Madras’ global outreach through innovative online programs and digital platforms. A key architect of the IITM BS in Data Science and Applications and a leading member of NPTEL, he has shaped large-scale digital education in India. His expertise spans information theory, error-control coding, and communication systems, with numerous publications and editorial roles in top IEEE journals. Through CODE, he continues to bridge technology, pedagogy, and accessibility to make IIT Madras-quality education available to all.",
       image: "{{ url_for('static', filename='images/andrew.jpg') }}"
     },
-    "jane": {
-      name: "Jane Smith",
+    "vignesh": {
+      name: "Vignesh Muthuvijayan",
       role: "Assistant Coordinator, CODE",
-      desc: "Jane Smith supports course coordination and outreach. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut.",
-      image: "{{ url_for('static', filename='images/andrew.jpg') }}"
+      desc: "Prof. Vignesh Muthuvijayan serves as Associate Chair of CODE at IIT Madras and is a Professor in the Department of Biotechnology. He coordinates the BS in Data Science and Applications program and contributes significantly to NPTEL course development. A chemical engineer by training, his academic work focuses on biomaterials and tissue engineering, and he has been instrumental in advancing IIT Madras’ digital education and outreach efforts.",
+      image: "{{ url_for('static', filename='images/vignesh.jpg') }}"
     }
     // Add more entries 
   };
@@ -461,6 +611,143 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+}); 
+    
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Get all the necessary elements
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const navPanel = document.getElementById("mobile-nav-panel");
+  const closeBtn = document.getElementById("mobile-nav-close-btn");
+  const overlay = document.getElementById("page-overlay");
+
+  function openNavPanel() {
+    navPanel.classList.add("open");
+    overlay.classList.add("active");
+  }
+
+  function closeNavPanel() {
+    navPanel.classList.remove("open");
+    overlay.classList.remove("active");
+  }
+
+  // Open the panel when the hamburger is clicked
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener("click", openNavPanel);
+  }
+  
+  // Close the panel when the 'X' button is clicked
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeNavPanel);
+  }
+
+  // Close the panel when the overlay is clicked
+  if (overlay) {
+    overlay.addEventListener("click", closeNavPanel);
+  }
+
+    // ADDED: Close the panel when a navigation link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener("click", closeNavPanel);
+    });
+
+});     
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector('.main-header');
+
+    if (header) {
+        window.onscroll = function() {
+            // We check if the user has scrolled more than 50px
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                // If yes, add the 'header-scrolled' class
+                header.classList.add('header-scrolled');
+            } else {
+                // If not, remove the 'header-scrolled' class
+                header.classList.remove('header-scrolled');
+            }
+        };
+    }
+
+    // ... your other JavaScript for modals, filtering, etc. ...
+});
+
+
+
+
+
+window.onload = function() {
+  // Find the scrolling container and the chart itself
+  const chartWrapper = document.querySelector('.org-chart-wrapper');
+  const chart = document.querySelector('.org-chart');
+
+  if (chartWrapper && chart) {
+    const chartWidth = chart.scrollWidth;
+    const wrapperWidth = chartWrapper.clientWidth;
+    chartWrapper.scrollLeft = (chartWidth - wrapperWidth) / 2;
+  }
+};
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    // --- YOUR EXISTING SIDEBAR SCRIPT (Keep this as is) ---
+    const sidebarItems = document.querySelectorAll(".sidebar-list .list-item");
+    const employeeCards = document.querySelectorAll(".employee-profile-card");
+    // ... (the rest of your existing script) ...
+
+
+    // --- ADD THIS NEW SCRIPT FOR THE ORG CHART ---
+    const orgChartLinks = document.querySelectorAll('.org-chart a');
+    const teamSection = document.getElementById('team-section');
+
+    orgChartLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            // 1. Prevent the default link behavior
+            event.preventDefault();
+
+            // 2. Get the team name from the clicked chart node
+            const teamName = this.getAttribute('data-team');
+
+            // 3. Scroll down to the employee section
+            if (teamSection) {
+                teamSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // 4. Find the matching button in the sidebar
+            const sidebarButton = document.querySelector(`.sidebar-list .list-item[data-team="${teamName}"]`);
+            
+            // 5. Programmatically "click" the sidebar button to trigger your filter
+            if (sidebarButton) {
+                // Use a short delay to allow the scroll to start before filtering
+                setTimeout(() => {
+                    sidebarButton.click();
+                }, 500); 
+            }
+        });
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const teamHeading = document.getElementById("team-name-heading");
+    const allFilterButtons = document.querySelectorAll("[data-team]");
+
+    if (teamHeading && allFilterButtons.length > 0) {
+        allFilterButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                const selectedTeam = this.getAttribute("data-team");
+                teamHeading.innerText = (selectedTeam === "ALL") ? "All Employees" : selectedTeam;
+            });
+        });
+    }
 });
 
 
