@@ -3,7 +3,7 @@
 
 
 <section  id="home" class="hero-banner">
-  <img src="{{ url_for('static', filename='images/hero-banner.png') }}" alt="Banner">
+  <img src="{{ url_for('static', filename='images/hero-banner.jpg') }}" alt="Banner">
 </section>
 
 
@@ -17,11 +17,10 @@
     </div>
 
     <div class="about-text">
-      <h2>About</h2>
+      <h2>ABOUT CODE</h2>
       <p>
-        Centre for Outreach and Digital Education (CODE) is the centre which coordinates all 
-        non-campus academic & outreach activities from IIT Madras. This was formerly called 
-        Centre for Continuing Education (CCE) started in 1986.
+        The Centre for Outreach and Digital Education (CODE) was established in 2022 to integrate and coordinate the various outreach and digital education initiatives of IIT Madras. Since its inception, CODE has taken over the various activities that were coordinated by the Centre for Continuing Education, which was established in 1986. CODE coordinates IIT Madras’s non-campus BS and web-enabled MTech programs, connects with schools nationwide through the IITM School Connect initiative, and drives executive education and certification efforts such as NPTEL, GIAN, and NPTEL+.
+        CODE stands at the forefront of IIT Madras’s vision to democratize education, nurturing a global community of learners driven by curiosity, innovation, and purpose.
       </p>
     </div>
   </div>
@@ -31,7 +30,7 @@
 
 <section id="coordinator" class="section-title">
 
-  <h2><span class="highlight">COURSE</span> COORDINATOR</h2>
+  <h2><span class="highlight">LEADERSHIP</span> TEAM</h2>
 
 </section>
 
@@ -40,7 +39,7 @@
     <!-- Employee 1 -->
     <div class="employee-card">
       <img src="{{ url_for('static', filename='images/andrew.jpg') }}" alt="Andrew Thangaraj">
-      <h3>Andrew Thangaraj</h3>
+      <h3>Prof. Andrew Thangaraj</h3>
       <p style="color: black;">Chair , CODE</p>
       <p>IIT Madras</p>
       <!-- data-employee must match the key in employeeData below -->
@@ -54,7 +53,7 @@
     <!-- Employee 2 -->
     <div class="employee-card">
       <img src="{{ url_for('static', filename='images/vignesh.jpg') }}" alt="Jane Smith">
-      <h3>Vignesh Muthuvijayan</h3>
+      <h3>Prof. Vignesh Muthuvijayan</h3>
       <p style="color: black;">Associate Chair , CODE</p>
       <p>IIT Madras</p>
       <a href="#" class="view-profile" data-employee="vignesh">
@@ -63,8 +62,395 @@
       </a>
     </div>
 
+
+    <div class="employee-card grid-center-single">
+      <img src="{{ url_for('static', filename='images/bharathi.jpg') }}" alt="Jane Smith">
+      <h3>Bharathi</h3>
+      <p style="color: black;">Chief Operating Officer, CODE</p>
+      <p>IIT Madras</p>
+      <a href="#" class="view-profile" data-employee="bharathi">
+        <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+        View Profile
+      </a>
+    </div>
+
     <!-- Add more employee cards: set data-employee="your_key" -->
   </div>
+
+
+
+  <section class="leadership-accordion">
+
+
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      BS Degree Coordinators
+      <span class="accordion-icon">+</span>
+    </button>
+    <div class="accordion-content">
+      <div class="container bs-coordinators-grid">
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/andrew.jpg') }}" alt="Andrew Thangaraj">
+          <h3>Prof. Andrew Thangaraj</h3>
+          <p style="color: black;">Coordinator, BS Data Science </p> <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="andrew">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+         <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/vignesh.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Vignesh Muthuvijayan</h3>
+          <p style="color: black;">Coordinator, BS Data Science </p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="vignesh">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/sankaran.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Sankaran Aniruddhan</h3>
+          <p style="color: black;">Coordinator, BS Electronic Systems</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="sankaran">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/boby.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Boby George</h3>
+          <p style="color: black;">Coordinator, BS Electronic Systems</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="boby">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/balaji.png') }}" alt="Jane Smith">
+          <h3>Prof. Balaji Srinivasan</h3>
+          <p style="color: black;">Advisor , Internships and Placements (IIC)</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="balaji">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      NPTEL Coordinators
+      <span class="accordion-icon">+</span>
+    </button>
+    <div class="accordion-content">
+      <div class="container nptel-coordinators-grid">
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/prathap.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Prathap Haridoss</h3>
+          <p style="color: black;">Vice Chair, NPTEL</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="prathap">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/andrew.jpg') }}" alt="Andrew Thangaraj">
+          <h3>Prof. Andrew Thangaraj</h3>
+          <p style="color: black;">Coordinator, NPTEL</p>
+          <p>IIT Madras</p>
+          <!-- data-employee must match the key in employeeData below -->
+          <a href="#" class="view-profile" data-employee="andrew">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+
+        </div>
+
+        <!-- Employee 2 -->
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/vignesh.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Vignesh Muthuvijayan</h3>
+          <p style="color: black;">Coordinator, NPTEL</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="vignesh">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/ramkrishna.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Ramkrishna Pasumarthy</h3>
+          <p style="color: black;">Coordinator, NPTEL</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="ramkrishna">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/janakiraman.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Janakiraman Viraraghavan</h3>
+          <p style="color: black;">Coordinator, NPTEL</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="janakiraman">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div> 
+        
+        
+        
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      Web-Enabled PG Programs' Coordinators
+      <span class="accordion-icon">+</span>
+    </button>
+    <div class="accordion-content">
+      <div class="container wmt-coordinators-grid">
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/sameen.jpg') }}" alt="Jane Smith">
+          <h3>Prof. A Sameen</h3>
+          <p style="color: black;">Coordinator, Web-enabled PG Program in Aerospace Engineering </p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="sameen">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>  
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/sridharakumar.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Sridharakumar Narasimhan</h3>
+          <p style="color: black;">Coordinator, Web-enabled PG Programme in Artificial Intelligence & Industrial Artificial Intelligence</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="sridharakumar">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>  
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/chester.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Chester Rebeiro</h3>
+          <p style="color: black;">Coordinator, Web-enabled M.Tech Programme in Computer Science Engineering</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="chester">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>  
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/krishnakannan.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Krishna Kannan</h3>
+          <p style="color: black;">Coordinator, Web-enabled PG Programme in Mechanical Engineering</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="krishnakannan">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>  
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/anand.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Anand Krishnasamy</h3>
+          <p style="color: black;">Coordinator, Web-enabled PG Programme in Mechanical Engineering</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="anand">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div> 
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/janakiraman.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Janakiraman V.</h3>
+          <p style="color: black;">Coordinator, Web-enabled PG Programme in Electrical Engineering</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="janakiramanv">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>   
+        
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/shankarram.jpg') }}" alt="Jane Smith">
+          <h3>Prof. C.S. Shankarram</h3>
+          <p style="color: black;">Coordinator, Web-enabled PG Programme in E-Mobility</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="shankarram">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div> 
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/rajagopalan.jpg') }}" alt="Jane Smith">
+          <h3>Prof. Rajagopalan Srinivasan</h3>
+          <p style="color: black;">Coordinator, Web-enabled PG Programme in Process Safety</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="rajagopalan">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div> 
+
+        </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      CODE Team Leads
+      <span class="accordion-icon">+</span>
+    </button>
+    <div class="accordion-content">
+      <div class="container team-leads-grid">
+
+        <div class="employee-card first-lead">
+          <img src="{{ url_for('static', filename='images/bharathi.jpg') }}" alt="Bharathi">
+          <h3>Bharathi</h3>
+          <p style="color: black;">Chief Operating Officer, CODE</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="bharathi">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/ambica.jpg') }}" alt="Ambica">
+          <h3>Ambica Elango</h3>
+          <p style="color: black;">BS Degree</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="ambica">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/lakshmi.jpg') }}" alt="Lakshmi">
+          <h3>Lakshmi Priya</h3>
+          <p style="color: black;">NPTEL</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="lakshmi">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/kamala.jpg') }}" alt="Kamala">
+          <h3>Kamala Ramakrishnan</h3>
+          <p style="color: black;">School Connect and CODE Chapters</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="kamala">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/jayakrishnan.jpg') }}" alt="Dr. Jayakrishnan">
+          <h3>Dr. Jayakrishnan</h3>
+          <p style="color: black;">Head,Education and Technology</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="jayakrishnan">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/sivagami.jpg') }}" alt="Sivagami">
+          <h3>Sivagami V</h3>
+          <p style="color: black;">Web enabled PG Programs</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="sivagami">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/arun.jpg') }}" alt="Arun">
+          <h3>Arun Ramachandran</h3>
+          <p style="color: black;">Marketing</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="arun">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/anitha.jpg') }}" alt="Anitha">
+          <h3>M Anitha</h3>
+          <p style="color: black;">Exam</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="anitha">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/aarthi.jpg') }}" alt="Aarthi">
+          <h3>Aarthi Janet G</h3>
+          <p style="color: black;">LC/SPOC</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="aarthi"> <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/sripriya.jpg') }}" alt="Sripriya">
+          <h3>Sripriya</h3>
+          <p style="color: black;">Accounts</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="sripriya">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/sangeetha.jpg') }}" alt="Sangeetha">
+          <h3>Azhagu Sangeetha P K</h3>
+          <p style="color: black;">Accounts</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="sangeetha">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/pradeepa.jpg') }}" alt="Pradeepa">
+          <h3>Pradeepa S</h3>
+          <p style="color: black;">Studio</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="pradeepa">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+          </a>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+</section>
 </section>
 
 <div id="employeeModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
@@ -107,14 +493,12 @@
 <!---------------------------NO CHANGE UP ------------------------------------------------------->
 
 
-
 <section id="orgchart" class="section-title">
   <h2>
     <span class="code-highlight">ORGANIZATION</span>
     <span class="team-normal">CHART</span>
   </h2>
 </section>
-
 
 <section id="orgchartwrapper" class="org-chart-wrapper">
   <div class="org-chart">
@@ -130,66 +514,60 @@
             </div>
             <ul>
               <li>
-                <div class="org-node node-team-logo">
+                <div class="org-node node-department bs node-program bs no-connector-circle">
                   <img src="{{ url_for('static', filename='images/logo-bs-degree.png') }}" alt="IITM BS Degree Logo">
                 </div>
                 <ul class="vertical-list">
                   <li><a href="#team-section" class="org-node node-subteam" data-team="POD Ops">Support</a></li>
                   <li><a href="#team-section" class="org-node node-subteam" data-team="Portal">Portal</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Tech & Data">Tech & Data</a></li>
                   <li><a href="#team-section" class="org-node node-subteam" data-team="Course Instructor">Instructors</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree Accounts">BS Accounts</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Design - BS Degree">BS Design</a></li>                  
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="IIC">IIC</a></li>
                   <li><a href="#team-section" class="org-node node-subteam" data-team="Student affairs">Student Affairs</a></li>
                 </ul>
               </li>
               <li>
-                <div class="org-node node-team-logo">
-                  <img src="{{ url_for('static', filename='images/logo-nptel.png') }}" alt="NPTEL Logo">
+                <div class="org-node node-department NPTEL node-program nptel no-connector-circle">
+                   <img src="{{ url_for('static', filename='images/logo-nptel.png') }}" alt="NPTEL Logo">
                 </div>
                 <ul class="vertical-list">
-                    <li><a href="#team-section" class="org-node node-subteam" data-team="NPTEL Support">NPTEL Support</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="NPTEL Support">Support</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Portal">Portal</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Local chapter">Local Chapter</a></li>
                 </ul>
               </li>
               <li>
-                <div class="org-node node-department teal">
-                    <span class="node-title">OTHER CODE PROGRAMS</span>
+                <div class="org-node node-department webpg node-program pg no-connector-circle "> 
+                  <img src="{{ url_for('static', filename='images/logo-pg.png') }}" alt="PG Logo">
                 </div>
                 <ul class="vertical-list">
-                  <li><a href="#" class="org-node node-team-logo" data-team="School Connect Team"><img src="{{ url_for('static', filename='images/logo-school-connect.png') }}" alt="School Connect Logo"></a></li>
-                  <li><a href="#" class="org-node node-team-logo" data-team="ICMAI"><img src="{{ url_for('static', filename='images/logo-icmai.png') }}" alt="ICMAI Logo"></a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Web M.Tech">Web M.Tech</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="GATE Team">GATE Team</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Code ex/workshops">Workshops</a></li>
+                   <li><a href="#team-section" class="org-node node-subteam" data-team="Support">Support</a></li>
+                   <li><a href="#team-section" class="org-node node-subteam" data-team="Portal">Portal</a></li>
+                   <li><a href="#team-section" class="org-node node-subteam" data-team="Industry relationships & Outreach">Industry Relationships & Outreach</a></li> </ul>
+              </li>
+              <li>
+                <div class="org-node node-department teal">
+                  <img src="{{ url_for('static', filename='images/logo-main.png') }}" alt="code Logo">
+                </div>
+                <ul class="vertical-list">
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="School Connect Team">School Connect</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Executive Education">Executive Education</a></li> <li><a href="#team-section" class="org-node node-subteam" data-team="Code ex/workshops">Workshops</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="ICMAI">ICMAI</a></li>
                 </ul>
               </li>
             </ul>
           </li>
           <li>
             <div class="org-node node-department purple">
-                <span class="node-title">FUNCTION</span>
+              <span class="node-title">FUNCTIONS</span>
             </div>
             <ul class="vertical-list">
-              <li><a href="#" class="org-node node-function" data-team="Design">Design</a></li>
-              <li><a href="#" class="org-node node-function" data-team="CODE - Accounts">Accounts</a></li>
-              <li><a href="#" class="org-node node-function" data-team="CODE Marketing">Marketing</a></li>
-              <li><a href="#" class="org-node node-function" data-team="QP">QP</a></li>
-              <li><a href="#" class="org-node node-function" data-team="Studio Team">Studio</a></li>
-              <li><a href="#" class="org-node node-function" data-team="CSR">CSR</a></li>
-              <li><a href="#" class="org-node node-function" data-team="Internship">Internship</a></li>
-              <li>
-                <div class="org-node sub-department">Exam</div>
-                <ul class="vertical-list">
-                    <li><a href="#team-section" class="org-node node-subteam" data-team="LC + Exam">LC + Exam</a></li>
-                    <li><a href="#team-section" class="org-node node-subteam" data-team="Exams + Soft skill">Soft Skills</a></li>
-                </ul>
-              </li>
-              <li>
-                <div class="org-node sub-department">Translation</div>
-                <ul class="vertical-list">
-                    <li><a href="#team-section" class="org-node node-subteam" data-team="Translation">Translation</a></li>
-                    <li><a href="#team-section" class="org-node node-subteam" data-team="Text Transcription">Transcription</a></li>
-                </ul>
-              </li>
+              <li><a href="#team-section" class="org-node node-function" data-team="CODE - Accounts">Accounts</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="CODE Marketing">Marketing</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="TEXT / TRANSLATION">Translation & Transcription</a></li> 
+              <li><a href="#team-section" data-team="LC + Exam" class="org-node node-function">Exam</a></li>              
+              <li><a href="#team-section" class="org-node node-function" data-team="Studio Team">Studio</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="CSR">CSR</a></li>
             </ul>
           </li>
         </ul>
@@ -280,39 +658,37 @@
         <span class="choose-label">CHOOSE</span>
         <button class="caret" aria-label="Open team list" title="Open team list">▾</button>
       </div>
-      <ul class="sidebar-list" role="list">
-        <li class="list-item active" data-team="ALL" role="listitem">ALL</li>
-        <li class="list-item" data-team="Accounts - CODE/NPTEL" role="listitem">Accounts - CODE/NPTEL</li>
-        <li class="list-item" data-team="BS Degree Accounts" role="listitem">BS Degree Accounts</li>
-        <li class="list-item" data-team="CODE - Accounts" role="listitem">CODE - Accounts</li>
-        <li class="list-item" data-team="CODE Marketing" role="listitem">CODE Marketing</li>
-        <li class="list-item" data-team="CSR" role="listitem">CSR</li>
-        <li class="list-item" data-team="Code ex/workshops" role="listitem">Code ex/workshops</li>
-        <li class="list-item" data-team="Course Instructor" role="listitem">Course Instructor</li>
-        <li class="list-item" data-team="Design" role="listitem">Design</li>
-        <li class="list-item" data-team="Design - BS Degree" role="listitem">Design - BS Degree</li>
-        <li class="list-item" data-team="Dev" role="listitem">Dev</li>
-        <li class="list-item" data-team="Developer" role="listitem">Developer</li>
-        <li class="list-item" data-team="Exams + Soft skill" role="listitem">Exams + Soft skill</li>
-        <li class="list-item" data-team="GATE Team" role="listitem">GATE Team</li>
-        <li class="list-item" data-team="ICMAI" role="listitem">ICMAI</li>
-        <li class="list-item" data-team="IIC" role="listitem">IIC</li>
-        <li class="list-item" data-team="Internship" role="listitem">Internship</li>
-        <li class="list-item" data-team="LC + Exam" role="listitem">LC + Exam</li>
-        <li class="list-item" data-team="NPTEL" role="listitem">NPTEL</li>
-        <li class="list-item" data-team="NPTEL Support" role="listitem">NPTEL Support</li>
-        <li class="list-item" data-team="Outreach/Social Media" role="listitem">Outreach/Social Media</li>
-        <li class="list-item" data-team="POD Ops" role="listitem">POD Ops</li>
-        <li class="list-item" data-team="Portal" role="listitem">Portal</li>
-        <li class="list-item" data-team="QP" role="listitem">QP</li>
-        <li class="list-item" data-team="School Connect Team" role="listitem">School Connect Team</li>
-        <li class="list-item" data-team="Student affairs" role="listitem">Student affairs</li>
-        <li class="list-item" data-team="Studio Team" role="listitem">Studio Team</li>
-        <li class="list-item" data-team="Text / Translation" role="listitem">Text / Translation</li>
-        <li class="list-item" data-team="Text Transcription" role="listitem">Text Transcription</li>
-        <li class="list-item" data-team="Translation" role="listitem">Translation</li>
-        <li class="list-item" data-team="Web M.Tech" role="listitem">Web M.Tech</li>
-      </ul>
+        <ul class="sidebar-list" role="list">
+          <li class="list-item active" data-team="ALL" role="listitem">ALL</li>
+
+          <li class="list-item" data-team="POD Ops" role="listitem">BS Degree - Support</li>
+          <li class="list-item" data-team="Portal" role="listitem">BS Degree - Portal</li>
+          <li class="list-item" data-team="Tech & Data" role="listitem">Tech and Data</li>
+          <li class="list-item" data-team="Course Instructor" role="listitem">Course Instructors</li>
+          <li class="list-item" data-team="IIC" role="listitem">IIC</li>
+          <li class="list-item" data-team="Student affairs" role="listitem">Student Affairs</li>
+          
+          <li class="list-item" data-team="NPTEL Support" role="listitem">NPTEL- Support</li>
+          <li class="list-item" data-team="Portal" role="listitem">NPTEL- Portal</li>
+          <li class="list-item" data-team="Local chapter" role="listitem">Local Chapter</li>
+          
+          <li class="list-item" data-team="Support" role="listitem">WMT - Support</li>
+          <li class="list-item" data-team="Portal" role="listitem">WMT - Portal</li>
+          <li class="list-item" data-team="Industry relationships & Outreach" role="listitem">Industry Relationships & Outreach</li>
+
+          <li class="list-item" data-team="School Connect Team" role="listitem">School Connect</li>
+          <li class="list-item" data-team="Executive Education" role="listitem">Executive Education</li>
+          <li class="list-item" data-team="Code ex/workshops" role="listitem">Workshops</li>
+          <li class="list-item" data-team="ICMAI" role="listitem">ICMAI</li>
+
+          <li class="list-item" data-team="ACCOUNTS_GROUP" role="listitem">Accounts</li>
+          <li class="list-item" data-team="MARKETING_GROUP" role="listitem">Marketing</li>
+          <li class="list-item" data-team="TRANSLATION_GROUP" role="listitem">Translation and Transcription</li>
+          <li class="list-item" data-team="EXAM_GROUP" role="listitem">Exam</li>
+
+          <li class="list-item" data-team="Studio Team" role="listitem">Studio</li>
+          <li class="list-item" data-team="CSR" role="listitem">CSR</li>
+        </ul>
     </div>
   </aside>
 
@@ -391,11 +767,11 @@
   <!-- Social + Copyright -->
   <div class="contact-bottom">
     <div class="social-icons">
-      <a href="#"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"></a>
-      <a href="#"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter"></a>
-      <a href="#"><img src="{{ url_for('static', filename='images/youtube.png') }}" alt="YouTube"></a>
-      <a href="#"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn"></a>
-      <a href="#"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></a>
+      <a href="https://www.instagram.com/code_iitm/"  target="_blank"><img src="{{ url_for('static', filename='images/instagram.png') }}" alt="Instagram"></a>
+      <a href="https://x.com/CODE_iitm_" target="_blank"><img src="{{ url_for('static', filename='images/twitter.png') }}" alt="Twitter"></a>
+      <a href="https://www.youtube.com/@CODE-IITMadras" target="_blank"><img src="{{ url_for('static', filename='images/youtube.png') }}" alt="YouTube"></a>
+      <a href="linkedin.com/company/centre-for-outreach-and-digital-education-code" target="_blank"><img src="{{ url_for('static', filename='images/linkedin.png') }}" alt="LinkedIn"></a>
+      <a href="https://www.facebook.com/CODEIITM/" target="_blank"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></a>
     </div>
 
     <p class="copyright">
@@ -448,17 +824,198 @@
 
   const employeeData = {
     "andrew": {
-      name: "Andrew Thangaraj",
+      name: "Prof. Andrew Thangaraj",
       role: "Chair CODE, IIT Madras",
       desc: "Prof. Andrew Thangaraj is a Professor in the Department of Electrical Engineering at IIT Madras and the Chair of the Centre for Outreach and Digital Education (CODE). He leads IIT Madras’ global outreach through innovative online programs and digital platforms. A key architect of the IITM BS in Data Science and Applications and a leading member of NPTEL, he has shaped large-scale digital education in India. His expertise spans information theory, error-control coding, and communication systems, with numerous publications and editorial roles in top IEEE journals. Through CODE, he continues to bridge technology, pedagogy, and accessibility to make IIT Madras-quality education available to all.",
       image: "{{ url_for('static', filename='images/andrew.jpg') }}"
     },
     "vignesh": {
-      name: "Vignesh Muthuvijayan",
+      name: "Prof. Vignesh Muthuvijayan",
       role: "Assistant Coordinator, CODE",
       desc: "Prof. Vignesh Muthuvijayan serves as Associate Chair of CODE at IIT Madras and is a Professor in the Department of Biotechnology. He coordinates the BS in Data Science and Applications program and contributes significantly to NPTEL course development. A chemical engineer by training, his academic work focuses on biomaterials and tissue engineering, and he has been instrumental in advancing IIT Madras’ digital education and outreach efforts.",
       image: "{{ url_for('static', filename='images/vignesh.jpg') }}"
+    },
+    "ramkrishna": {
+      name: "Prof. Ramkrishna Pasumarthy",
+      role: "Coordinator, NPTEL",
+      desc: "Prof. Ramkrishna Pasumarthy is a Professor in the Department of Electrical Engineering (Control & Optimization group) at IIT Madras and serves as the Coordinator for NPTEL. He holds a PhD in Systems & Control from the University of Twente, The Netherlands, and has held postdoctoral positions at the University of Melbourne and UCLA. His research interests include network systems optimization and control, data-driven control methods, brain-network control, and autonomous/connected vehicle systems. He is also associated with the Wadhwani School of Artificial Intelligence at IIT Madras and serves as Program Chair of the BS in Data Science & AI at IITM Zanzibar. Through NPTEL, he contributes to the design and delivery of high-quality online education, strengthening IIT Madras’ national digital learning initiatives.",
+      image: "{{ url_for('static', filename='images/ramkrishna.jpg') }}"
+    },
+    "janakiraman": {
+      name: "Prof. Janakiraman Viraraghavan",
+      role: "Coordinator, NPTEL",
+      desc: "Prof. Janakiraman Viraraghavan is an Associate Professor in the Department of Electrical Engineering at IIT Madras, specializing in Integrated Circuits and Systems. He serves as the Coordinator for NPTEL, overseeing the design, development, and delivery of high-quality online courses for learners nationwide. His research focuses on hardware accelerators for neural networks, in-memory computing, and statistical analysis in VLSI systems, with multiple publications in top journals. Through his work at NPTEL, Prof. Viraraghavan helps expand IIT Madras’ digital education outreach, ensuring that advanced technical knowledge and cutting-edge research are accessible to learners across India, thereby bridging the gap between academia and online learning platforms.",
+      image: "{{ url_for('static', filename='images/janakiraman.jpg') }}"
+    },
+    "sankaran": {
+      name: "Prof. Sankaran Aniruddhan",
+      role: "Coordinator, IITM BS (Electronic Systems)",
+      desc: "Prof. Sankaran Aniruddhan is a Professor in the VLSI group of the Department of Electrical Engineering at IIT Madras. He serves as the Coordinator for the IITM BS in Electronic Systems program, managing curriculum design, academic coordination, and program execution. His research expertise includes analog and RF integrated circuit design, focusing on high-performance and low-power systems. Prof. Aniruddhan is instrumental in shaping the BS Electronic Systems program, ensuring it meets both academic and industry standards. He also mentors students in research projects and works closely with faculty to integrate emerging technologies and pedagogical methods, fostering a robust learning environment for undergraduate learners.",
+      image: "{{ url_for('static', filename='images/sankaran.jpg') }}"
+    },
+    "boby": {
+      name: "Prof. Boby George",
+      role: "Coordinator, IITM BS (Electronic Systems)",
+      desc: "Prof. Boby George is a Professor in the Department of Electrical Engineering at IIT Madras and the Coordinator for the IITM BS in Electronic Systems program. He previously served as Head of the Central Electronics Centre (2021–2023) and has extensive experience in research and academic leadership. His work focuses on sensor interface electronics, electric and magnetic field-based sensors, and biomedical instrumentation, with numerous publications and applied projects. Prof. George contributes significantly to program development, course planning, and mentoring students, ensuring the BS Electronic Systems curriculum is aligned with modern industry and research trends. Through his efforts, students gain exposure to practical and cutting-edge electronic system technologies.",
+      image: "{{ url_for('static', filename='images/boby.jpg') }}"
+    },
+    "bharathi": {
+      name: "Bharathi",
+      role: "Director of Operations, CODE",
+      desc: "Bharathi is the driving force behind the operations of NPTEL and the BS Degree program. She has over 15 years of work experience, 13 of which have been with NPTEL and the BS program. She also has over 8 years of administrative experience in managing the IITM campus trust activities including IITM Campus Creche, the Waste Management Group within IITM, the Charities Trust, and volunteering at the Pediatric ward of the Cancer hospital. She heads all Operations of CODE, IIT Madras at present.",
+      image: "{{ url_for('static', filename='images/bharathi.jpg') }}"
+    },
+    "balaji": {
+      name: "Prof. Balaji Srinivasan",
+      role: "Advisor, Internships & Placements (IIC)",
+      desc: "Prof. Balaji Srinivasan is a seasoned faculty member in the Department of Electrical Engineering at IIT Madras, currently serving as the Advisor for Internships & Placements in the IIC (Industry Interaction Cell) of the BS Degree Programme. With a PhD from The University of New Mexico (2000) and more than 20 years of academic and industrial experience at IIT Madras, his research spans active and passive optical components, fiber-optic sensors, fiber lasers and their applications. In his role as Advisor for the BS Degree Programme’s placement efforts, Prof. Srinivasan works to connect learners with industry opportunities, strengthen employer partnerships and guide students in building career-ready skills. His focus is on ensuring that the curriculum, internships and placement pipelines are aligned with current industry expectations and emerging technologies, thereby empowering students to make meaningful transitions from the academic environment to professional roles.",
+      image: "{{ url_for('static', filename='images/balaji.png') }}"      
+    },
+
+    "sameen": {
+      name: "Prof. A Sameen",
+      role: "Coordinator, Web-enabled PG Programme in Aerospace Engineering",
+      desc: "Prof. A Sameen is a Professor in the Department of Aerospace Engineering at IIT Madras, with expertise in computational fluid dynamics, transition and turbulence phenomena in aerodynamics and aerospace systems. He serves as Coordinator for the Web-enabled PG Programme in Aerospace Engineering, overseeing curriculum design, delivery of online modules and ensuring the programme aligns with industry needs and emerging aerospace technology trends. Under his leadership, the programme extends IIT Madras’ academic excellence to working professionals worldwide, enabling up-skilling in aerospace design, simulation and system integration via flexible digital learning channels.",
+      image: "{{ url_for('static', filename='images/sameen.jpg') }}"
+    },
+
+    "sridharakumar": {
+      name: "Prof. Sridharakumar Narasimhan",
+      role: "Coordinator, Web-enabled PG Programme in Artificial Intelligence & Industrial Artificial Intelligence",
+      desc: "Prof. Sridharakumar Narasimhan is a Professor in the Department of Chemical Engineering at IIT Madras, specialising in process systems engineering, optimization, system identification and data-driven modelling for industrial applications. He coordinates the Web-enabled PG Programme in Artificial Intelligence & Industrial Artificial Intelligence, steering the development of online coursework, interactive modules and applied AI labs tailored to industrial contexts. His role ensures that working professionals gain access to cutting-edge AI skills delivered by IIT Madras, bridging academia and industry needs in the domain of intelligent systems.",
+      image: "{{ url_for('static', filename='images/sridharakumar.jpg') }}"
+    },
+
+    "chester": {
+      name: "Prof. Chester Rebeiro",
+      role: "Coordinator, Web-enabled M.Tech Programme in Computer Science Engineering",
+      desc: "Prof. Chester Rebeiro is an Associate Professor in the Department of Computer Science and Engineering at IIT Madras with research interests in hardware security, applied cryptography, side-channel analysis and operating-system security. He serves as Coordinator for the Web-enabled M.Tech Programme in Computer Science Engineering, guiding the online curriculum design, delivery of live/recorded modules and integration of practical, security-centric projects. His leadership ensures that professionals have access to rigorous, advanced CSE training from IIT Madras in a flexible, online format.",
+      image: "{{ url_for('static', filename='images/chester.jpg') }}"
+    },
+
+    "krishnakannan": {
+      name: "Prof. Krishna Kannan",
+      role: "Coordinator, Web-enabled PG Programme in Mechanical Engineering (Specialisation: Mechanical Design)",
+      desc: "Prof. Krishna Kannan is a Professor in the Department of Mechanical Engineering at IIT Madras, specialising in mechanics of filled elastomers, thermodynamical frameworks for reacting systems and constitutive modelling of visco-elastic materials. He coordinates the Web-enabled PG Programme in Mechanical Engineering with specialisation in Mechanical Design, overseeing online course modules, design case studies and interactive workshops. His role ensures that the online programme provides deep expertise in mechanical design principles, aligned with industry and research demands, accessible to working professionals anywhere.",
+      image: "{{ url_for('static', filename='images/krishnakannan.jpg') }}"
+    },
+
+    "anand": {
+      name: "Prof. Anand Krishnasamy",
+      role: "Coordinator, Web-enabled PG Programme in Mechanical Engineering (Specialisation: Automotive Technology)",
+      desc: "Prof. Anand Krishnasamy is a Professor in the Department of Mechanical Engineering at IIT Madras. He has over 15 years of teaching and more than 20 years of research experience in engine and fuel technologies, low-temperature combustion engines, alternative fuels and automotive systems. As Coordinator of the Web-enabled PG Programme in Mechanical Engineering with specialisation in Automotive Technology, he drives the curriculum development, online delivery and practical-lab integration of cutting-edge automotive research. His leadership enables working professionals to up-skill in automotive technology under the banner of IIT Madras via flexible online learning.",
+      image: "{{ url_for('static', filename='images/anand.jpg') }}"
+    },
+
+    "janakiramanv": {
+      name: "Prof. Janakiraman V",
+      role: "Coordinator, Web-enabled PG Programme in Electrical Engineering",
+      desc: "Prof. Janakiraman V is an Associate Professor in the Department of Electrical Engineering at IIT Madras, specialising in integrated circuits and systems, low-power circuit design and hardware implementations for machine-learning hardware. He serves as Coordinator for the Web-enabled PG Programme in Electrical Engineering, configuring online modules, managing remote labs and aligning the programme with emerging electrical and electronic system trends. Under his guidance, the programme provides flexible access to IIT Madras’ expertise in electrical engineering to professionals and engineers globally.",
+      image: "{{ url_for('static', filename='images/janakiraman.jpg') }}"
+    },
+
+    "shankarram": {
+      name: "Prof. C. S. Shankarram",
+      role: "Coordinator, Web-enabled PG Programme in E-Mobility",
+      desc: "Prof. C. Shankarram acts as Coordinator for the web-enabled PG programme in E-Mobility, overseeing curriculum, online module development and industry-relevant labs in electric-mobility systems. His role advances the delivery of IIT Madras-quality digital education in the rapidly growing e-mobility sector for working professionals, enabling access to specialised training in electric vehicles, battery systems and power-electronics online.",
+      image: "{{ url_for('static', filename='images/shankarram.jpg') }}"
+    },
+
+    "rajagopalan": {
+      name: "Prof. Rajagopalan Srinivasan",
+      role: "Coordinator, Web-enabled PG Programme in Process Safety",
+      desc: "Prof. Rajagopalan Srinivasan is a Professor in the Department of Chemical Engineering at IIT Madras, and serves as Coordinator for the Web-enabled PG Programme in Process Safety. In his role, he is guiding the creation and delivery of a flexible online curriculum aimed at working professionals in manufacturing, energy and process industries to enhance workplace safety, hazard-identification and risk-mitigation expertise. By leveraging the online mode, he ensures that IIT Madras’ rigorous engineering education reaches practitioners committed to safer industrial systems worldwide.",
+      image: "{{ url_for('static', filename='images/rajagopalan.jpg') }}"
+    },
+
+    "prathap": {
+      name: "Prof. Prathap Haridoss",
+      role: "Vice Chair, NPTEL",
+      desc: "Prof. Prathap Haridoss serves as the Vice Chair for NPTEL and is a Professor in the Department of Metallurgical and Materials Engineering at IIT Madras . He has been instrumental in expanding IIT Madras’s digital education ecosystem, coordinating and teaching several highly popular NPTEL courses, including the widely viewed 'Physics of Materials.' His research focuses on fuel cells and carbon nanomaterials. He holds a B.Tech from IIT Madras and a PhD from the University of Wisconsin–Madison, and previously worked as a Senior Scientist at Plug Power, New York. He has authored a textbook, holds three U.S. patents, and numerous international publications.",
+      image: "{{ url_for('static', filename='images/prathap.jpg') }}"
+    },
+
+
+
+    "lakshmi": {
+      name: "Lakshmi Priya",
+      role: "Senior Project Manager & NPTEL In-charge",
+      desc: "Lakshmi Priya is a Senior Project Manager at CODE, IIT Madras, overseeing the end-to-end management of the SWAYAM and NPTEL platforms. She leads large-scale NPTEL course operations, nationwide examinations, and multi-team coordination, ensuring seamless collaboration between IIT faculty, partner institutions, and learners. With over a decade of experience in EdTech operations, she has managed more than 8000 courses, impacting over 3.4 crore learners. Her leadership drives quality assurance, process optimization, and mentoring across teams, ensuring efficient delivery of IIT Madras’s digital education initiatives. Her vision is to advance as a strategic leader in EdTech, driving innovation in scalable, learner-centric systems that enhance access to high-quality education.",
+      image: "{{ url_for('static', filename='images/lakshmi.jpg') }}"
+    },
+
+    "ambica": {
+      name: "Ambica Elango",
+      role: "BS Degree In-charge",
+      desc: "Ambica Elango is a strategic operations and process management professional with over 11 years of progressive experience across software development, project management, and large-scale academic program execution. At CODE, IIT Madras, she leads cross-functional initiatives for the IITM BS Degree program, serving over 50,000 students. Her expertise lies in process design, stakeholder engagement, and workflow automation, ensuring efficiency and scalability across operations. With a strong focus on aligning people, platforms, and processes, Ambica plays a pivotal role in strengthening the operational backbone of the BS Degree program and driving continuous improvement across teams.",
+      image: "{{ url_for('static', filename='images/ambica.jpg') }}"
+    },
+
+    "kamala": {
+      name: "Kamala Ramakrishnan",
+      role: "Other CODE Programs In-charge",
+      desc: "Kamala Ramakrishnan brings over 30 years of diverse professional experience across education, legal, and technical domains in India and the USA. At CODE, she leads the School Connect Program and CODE Chapters, while also overseeing certificate management for IITM BS graduates, MoUs with universities, and hiring operations. With a proven record of streamlining processes and building strong teams, many of today’s CODE leads were mentored under her guidance. Kamala’s leadership focuses on operational excellence, nurturing talent, and fostering partnerships that strengthen CODE’s outreach and execution. Her experience and adaptability make her a key pillar in managing multiple programs and institutional initiatives at CODE.",
+      image: "{{ url_for('static', filename='images/kamala.jpg') }}"
+    },
+
+    "sivagami": {
+      name: "Sivagami V",
+      role: "Web-enabled PG Programs In-charge",
+      desc: "Sivagami V manages the Web-enabled Postgraduate Programs at CODE, IIT Madras, overseeing academic operations for master’s degrees offered across 13 specializations. With over 15 years of experience spanning education, finance, and program management, she ensures smooth execution across applications, admissions, course delivery, examinations, and convocation cycles. She previously contributed to a Ministry of Education project focusing on academic and infrastructure evaluation. At CODE, she focuses on process optimization, efficiency, and scalable operations. Her multidisciplinary background and structured approach have been instrumental in strengthening CODE’s postgraduate program delivery and ensuring high academic and administrative standards.",
+      image: "{{ url_for('static', filename='images/sivagami.jpg') }}"
+    },
+
+    "arun": {
+      name: "Arun Ramachandran",
+      role: "Marketing In-charge",
+      desc: "Arun Ramachandran serves as the Head of Marketing at CODE, IIT Madras, leading the institute’s outreach, branding, and communication strategies for online and executive education programs. With extensive experience in marketing and brand management across education and consumer sectors, he specializes in digital strategy, audience engagement, and partnership development. At CODE, he drives digital campaigns, strengthens industry collaborations, and enhances the global reach of IIT Madras’s online programs. His work focuses on positioning IIT Madras as a global leader in online and professional education through impactful storytelling, analytics-driven marketing, and scalable outreach initiatives.",
+      image: "{{ url_for('static', filename='images/arun.jpg') }}"
+    },
+
+    "pradeepa": {
+      name: "Pradeepa S",
+      role: "Studio In-charge",
+      desc: "Pradeepa S heads the Studio Team at CODE, IIT Madras, overseeing the complete production and post-production of academic video content. With over 14 years of experience in media and education, she has worked with premier institutions including IIT Madras, IIT Tirupati, IIM Bangalore, and NITTTR Chennai. Before joining CODE, she was an Assistant Professor at SASTRA Deemed University. At CODE, she manages studio operations, schedules, and content quality, while mentoring her team to deliver high-impact digital learning materials. Her leadership ensures the creation of engaging, high-quality educational content that drives the success of IIT Madras’s online and NPTEL initiatives.",
+      image: "{{ url_for('static', filename='images/pradeepa.jpg') }}"
+    },
+
+    "sripriya": {
+      name: "Sripriya",
+      role: "Senior Manager – Accounts",
+      desc: "Sripriya is a finance professional with over 15 years of experience in accounting and financial management, currently serving as Senior Manager – Accounts for CODE and BS Programs at IIT Madras. She manages financial operations for over 200 programs annually, overseeing budgeting, auditing, MIS reporting, and revenue tracking. Her leadership in streamlining workflows has improved efficiency, accuracy, and compliance across multiple projects including Data Science, Electronic Systems, and Continuing Education. With a vision to advance into a CFO role, Sripriya continues to drive financial strategy and digital transformation, ensuring strong fiscal governance across CODE operations.",
+      image: "{{ url_for('static', filename='images/sripriya.jpg') }}"
+    },
+
+    "sangeetha": {
+      name: "Azhagu Sangeetha P K",
+      role: "Accounts Head",
+      desc: "Azhagu Sangeetha P K serves as the Accounts Head at CODE, IIT Madras, bringing over 18 years of experience in financial operations, budgeting, and compliance. She manages high-value projects exceeding ₹200 crores, ensuring audit readiness and financial discipline across initiatives. Leading a 10-member team, she oversees fund flow, vendor management, and process automation to enhance efficiency. A Six Sigma AI Yellow Belt certified professional, she has successfully streamlined CSR fund allocation and financial closure processes. Her focus lies in driving digital transformation and innovation within finance, ensuring transparency and accountability in all CODE operations.",
+      image: "{{ url_for('static', filename='images/sangeetha.jpg') }}"
+    },
+
+    "anitha": {
+      name: "M. Anitha",
+      role: "Exam In-charge",
+      desc: "M. Anitha leads the Examination Team at CODE, IIT Madras, managing question paper preparation and exam operations for the NPTEL project and allied initiatives. Transitioning from the construction industry to education, she joined NPTEL in 2016 and has since built and scaled the QP team from handling 42 to over 900 courses. Her leadership has been pivotal in ensuring accuracy, timeliness, and reliability in nationwide exams. Recognized for her ability to develop teams and manage multiple projects under tight deadlines, she continues to strengthen exam operations with a vision to create a stable, process-driven, and collaborative environment across teams.",
+      image: "{{ url_for('static', filename='images/anitha.jpg') }}"
+    },
+
+    "aarthi": {
+      name: "Aarthi Janet G",
+      role: "LC/SPOC In-charge",
+      desc: "Aarthi Janet G is a results-driven learning design and development professional with over 17 years of experience across publishing and corporate sectors. At CODE, IIT Madras, she leads Learning Coordination and SPOC initiatives, aligning training design with learner and institutional needs. She excels in conducting needs assessments, developing customized learning solutions, and fostering collaboration across stakeholders. Known for her strategic thinking and interpersonal skills, Aarthi is committed to delivering effective, high-quality learning programs that enhance engagement and drive measurable improvement across academic and professional education projects.",
+      image: "{{ url_for('static', filename='images/aarthi.jpg') }}"
+    },
+
+    "jayakrishnan": {
+      name: "Dr. Jayakrishnan",
+      role: "Head, Education and Technology (NPTEL)",
+      desc: "Dr. Jayakrishnan serves as the Head of Education and Technology at NPTEL, IIT Madras. His work focuses on integrating research-driven insights into large-scale online education, enhancing the pedagogical effectiveness of NPTEL courses. With a background in ICT for Development of Education (ICT4DE), he has led major faculty development workshops using digital platforms like A-VIEW and MOODLE. His experience spans software engineering, quality control, and educational technology research at IIT Bombay’s CTARA. At NPTEL, he plays a key role in scaling technology-enabled learning solutions and ensuring quality enhancement as the program continues to expand across India’s higher education ecosystem.",
+      image: "{{ url_for('static', filename='images/jayakrishnan.jpg') }}"
     }
+
+
+
     // Add more entries 
   };
 
@@ -520,6 +1077,14 @@
       if (e.key === "Escape") closeModal();
     });
   });
+
+
+
+
+
+
+
+
 
 
 
@@ -735,6 +1300,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+    accordionHeaders.forEach(header => {
+        header.addEventListener("click", function () {
+            const accordionItem = this.parentElement;
+            const content = this.nextElementSibling;
+            const isOpen = accordionItem.classList.contains("active");
+
+            // Optional: Close all other items
+            accordionHeaders.forEach(otherHeader => {
+                if (otherHeader !== this) {
+                    otherHeader.parentElement.classList.remove("active");
+                    otherHeader.nextElementSibling.style.maxHeight = null;
+                }
+            });
+
+            // Toggle the clicked item
+            if (isOpen) {
+                accordionItem.classList.remove("active");
+                content.style.maxHeight = null; // Collapse the content
+            } else {
+                accordionItem.classList.add("active");
+                content.style.maxHeight = content.scrollHeight + "px"; // Expand the content
+            }
+        });
+    });
+
+    // ... your other scripts ...
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const teamHeading = document.getElementById("team-name-heading");

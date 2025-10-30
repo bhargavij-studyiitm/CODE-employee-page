@@ -125,7 +125,7 @@ html {
   display: inline-block;
   padding: 12px 22px;
   background: #f3e1d0;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-radius: 10px;
   text-decoration: none;
   color: #5c3b30;
@@ -154,82 +154,106 @@ html {
   width: 100%;
   margin-top: 20px;
   margin-bottom: 30px;
-
-} 
+  border-radius: 35px; /* Move border-radius to the container */
+  overflow: hidden;    /* Important: Keeps the zooming image contained */
+}
 
 .hero-banner img {
   width: 100%;
-  height: auto;   /* keeps aspect ratio */
-  display: block; /* removes bottom whitespace */
-  border-radius: 35px; 
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease-out; /* Add transition for smooth zoom */
 }
 
-
-
+/* Apply the zoom effect when hovering over the banner container */
+.hero-banner:hover img {
+  transform: scale(1.03); /* Slightly zooms the image in */
+}
 
 .about-section {
   display: flex;
   justify-content: center;
-  margin: 80px 0;
+  margin: 83px 0;
+  padding: 0 10px; /* Added padding for better edge spacing */
 }
 
 .about-wrapper {
   position: relative;
   display: flex;
   align-items: flex-start;
+  max-width: 1100px; /* Allow wrapper to be wider */
+  width: 100%;
 }
 
 /* Maroon rectangle */
 .about-accent {
-  width: 70px;
-  height: 250px;
-  background: #6b1f1f;  /* maroon */
-  border-radius: 0px 0px 0px 0px;
+  width: 250px;      /* Slightly wider */
+  height: 350px;    /* Taller */
+  background: #6b1f1f;
+  border-radius: 0;
   position: relative;
   z-index: 1;
-  top: 10px;
 }
 
-/* Image slightly higher */
+/* Image settings */
+/* --- About Section Image --- */
+
 .about-image {
   position: relative;
-  margin-left: -30px;   /* overlap on accent */
-  margin-top: -30px;    /* lift image higher */
+  margin-left: -40px;
+  margin-top: -30px;
   z-index: 2;
+  flex-shrink: 0;
+  border-radius: 20px; /* Apply border-radius to the container */
+  overflow: hidden;    /* Add overflow: hidden to contain the zoom */
 }
 
 .about-image img {
-  width: 410px;
-  border-radius: 20px 20px 20px 20px; /* curved top */
+  width: 550px; /* Your desired width */
+  max-width: 100%;
   display: block;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease-out; /* Add transition for smooth zoom */
 }
 
-/* About text lower */
+/* Apply the zoom effect when hovering the container */
+.about-image:hover img {
+  transform: scale(1.03); /* Slightly zooms the image in */
+}
+
+/* About text box settings */
 .about-text {
-  background: rgb(255, 255, 255);
+  background: #fdfdfd; /* Slightly off-white for a softer look */
   position: relative;
-  border-radius: 20px 20px 20px 20px;
-  padding: 30px;
-  margin-left: -80px;   /* overlap under image */
-  margin-top:100px;     /* push text lower than image */
-  max-width: 500px;
+  border-radius: 25px; /* Slightly more rounded corners */
+  padding: 30px;      /* Increased padding slightly */
+  margin-left: -100px;
+  margin-top: 100px;
+  max-width: 570px;
   z-index: 3;
-  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Softer, more pronounced shadow */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Added transition for hover */
+}
+
+/* Hover effect: Lift the card and increase shadow */
+.about-text:hover {
+  transform: translateY(-6px); /* Lifts the card up */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhances shadow on hover */
 }
 
 .about-text h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 1.4rem; /* Slightly larger heading */
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #3b2b26; /* Dark brown theme color */
 }
 
 .about-text p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444; /* Slightly darker text */
+  text-align: justify;
 }
-
-
 
 /* Section title wrapper */
 /* Add spacing before section titles */
@@ -277,6 +301,275 @@ html {
 }
 
 
+
+
+
+
+
+
+
+
+/* --- Leadership Accordion Styles --- */
+.leadership-accordion {
+  max-width: 1000px; /* Adjust width as needed */
+  margin: 40px auto; /* Center the accordion */
+}
+
+.accordion-item {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden; /* Important for smooth transition */
+}
+
+.accordion-header {
+  background-color: #f7f7f7; /* Light grey background for header */
+  color: #333;
+  cursor: pointer;
+  padding: 18px 25px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #7a1f1f;
+  color: #ddd;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* Style for when the accordion item is active/open */
+.accordion-item.active .accordion-header {
+  background-color: #7a1f1f;
+  color: #ddd;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg); /* Rotates '+' to 'x' */
+}
+
+.accordion-content {
+  max-height: 0; /* Hidden by default */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out; /* Smooth animation */
+  background-color: white;
+  padding: 0 20px; /* Add padding when open */
+}
+
+/* Style for the grid inside the accordion */
+.accordion-content .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 25px 0; /* Add vertical padding inside the content area */
+  justify-items: center; /* Center items if row isn't full */
+}
+
+
+
+
+/* --- BS Coordinators Specific Grid Layout (Forceful) --- */
+/* Apply max-width specifically to BS Coordinator cards */
+.bs-coordinators-grid .employee-card {
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+  justify-self: center; /* Center the card within its grid cell */
+}
+
+.bs-coordinators-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Force 2 columns */
+  gap: 30px !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 25px 0 !important;
+}
+
+.bs-coordinators-grid .employee-card {
+    justify-self: initial !important; /* Reset justification */
+}
+
+.bs-coordinators-grid .employee-card:last-child {
+  grid-column: 1 / -1 !important; /* Force span */
+  justify-self: center !important; /* Force center */
+  max-width: 300px !important;
+}
+
+/* --- NPTEL Coordinators Specific Grid Layout (Forceful) --- */
+.nptel-coordinators-grid .employee-card {
+  width: 100%;
+  max-width: 850px;
+  box-sizing: border-box;
+  justify-self: center; /* Center the card within its grid cell */
+}
+
+
+.nptel-coordinators-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Force 2 columns */
+  gap: 30px !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 25px 0 !important;
+}
+
+/* Ensure cards inside reset justification */
+.nptel-coordinators-grid .employee-card {
+    justify-self: initial !important; /* Reset justification */
+}
+
+/* Target the FIRST card in this specific grid */
+.nptel-coordinators-grid .employee-card:first-child {
+  grid-column: 1 / -1 !important; /* Force span */
+  justify-self: center !important; /* Force center */
+  max-width: 300px !important; /* Force width limit */
+}
+
+
+
+
+
+
+
+/* --- CODE Teamwise Leadership Specific Grid Layout (Forceful) --- */
+
+/* --- CODE Teamwise Leadership Specific Grid Layout --- */
+
+.team-leads-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* Force 4 columns */
+  gap: 20px !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  padding: 25px 0 !important;
+  /* REMOVE or set justify-items to stretch for default behavior */
+  justify-items: stretch !important; 
+}
+
+/* Base card style within this grid */
+.team-leads-grid .employee-card {
+  /* Remove justify-self from the general card style if present */
+  /* justify-self: center !important; */ 
+  width: 200px !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Row 1: Bharathi - Centered */
+.team-leads-grid .employee-card:first-child {
+  grid-column: 1 / -1 !important;
+  justify-self: center !important;
+  width: calc(25% - 15px) !important; /* Approx 1 column width */
+  max-width: calc(25% - 15px) !important;
+}
+
+/* Row 4: Anitha, Aarthi, Jayakrishnan - Centered Group */
+
+/* Card 10 (Anitha) - Span columns 1 & 2, centered */
+.team-leads-grid .employee-card:nth-child(10) {
+    grid-column: 1 / 3 !important; /* Span first two columns */
+    justify-self: center !important;
+    grid-row-start: 4 !important;
+}
+
+/* Card 11 (Aarthi) - Span columns 2 & 3, centered */
+.team-leads-grid .employee-card:nth-child(11) {
+    grid-column: 2 / 4 !important; /* Span middle two columns */
+    justify-self: center !important;
+    grid-row-start: 4 !important;
+}
+
+/* Card 12 (Jayakrishnan) - Span columns 3 & 4, centered */
+.team-leads-grid .employee-card:nth-child(12) {
+    grid-column: 3 / 5 !important; /* Span last two columns */
+    justify-self: center !important;
+    grid-row-start: 4 !important;
+}
+
+
+
+
+
+
+
+/* --- WMT Coordinators Specific Grid Layout (3-3-2) --- */
+
+.wmt-coordinators-grid {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important; /* Force 6 columns */
+  gap: 20px !important;
+  max-width: 1000px !important; /* Wider container for 3 cards */
+  margin: 0 auto !important;
+  padding: 25px 0 !important;
+  justify-items: center !important; /* Center all cards in their slots */
+}
+
+/* Base style for cards in this grid: set a max-width */
+.wmt-coordinators-grid .employee-card {
+  width: 100% !important;
+  max-width: 250px !important; /* Adjust card width as needed */
+  justify-self: center !important;
+}
+
+/* --- Row 1 (Cards 1, 2, 3) --- */
+.wmt-coordinators-grid .employee-card:nth-child(1) {
+  grid-column: 1 / 3 !important; /* Span columns 1-2 */
+}
+.wmt-coordinators-grid .employee-card:nth-child(2) {
+  grid-column: 3 / 5 !important; /* Span columns 3-4 */
+}
+.wmt-coordinators-grid .employee-card:nth-child(3) {
+  grid-column: 5 / 7 !important; /* Span columns 5-6 */
+}
+
+/* --- Row 2 (Cards 4, 5, 6) --- */
+.wmt-coordinators-grid .employee-card:nth-child(4) {
+  grid-column: 1 / 3 !important; /* Span columns 1-2 */
+}
+.wmt-coordinators-grid .employee-card:nth-child(5) {
+  grid-column: 3 / 5 !important; /* Span columns 3-4 */
+}
+.wmt-coordinators-grid .employee-card:nth-child(6) {
+  grid-column: 5 / 7 !important; /* Span columns 5-6 */
+}
+
+/* --- Row 3 (Cards 7, 8) --- */
+.wmt-coordinators-grid .employee-card:nth-child(7) {
+  grid-column: 2 / 4 !important; /* Span columns 2-3 (centered) */
+}
+.wmt-coordinators-grid .employee-card:nth-child(8) {
+  grid-column: 4 / 6 !important; /* Span columns 4-5 (centered) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Employee Section */
 .employees {
   padding: 60px 40px;
@@ -285,47 +578,79 @@ html {
 
 .employees .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Explicitly set 2 columns */
   gap: 30px;
-  max-width: 700px;
+  max-width: 850px;
   margin: 0 auto;
+  padding: 2px 0; /* Add some vertical padding */
 }
+
+/* Rule to center the last card ONLY when it's the 3rd item (odd number) */
+/* Rule for the last card when it's the 3rd item */
+/* Rule for the last card (Forceful) */
+/* Rule for the last card */
+.employees .container .employee-card:nth-child(3):last-child {
+  grid-column: 1 / -1;           /* Span both columns */
+  justify-self: center;         /* Center the card horizontally */
+  
+  /* Set an explicit width - Calculate based on your grid */
+  /* (Container Max Width - Gap) / Number of Columns = Card Width */
+  /* (850px - 30px) / 2 = 410px */
+  width: 410px;                  /* Explicitly set the width */
+  max-width: 410px;              /* Ensure it doesn't exceed this */
+  box-sizing: border-box;        /* Include padding/border in the width */
+}
+
+
+
+
+
 
 .employee-card {
   background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 16px; /* Slightly more rounded */
+  padding: 25px;      /* Increased padding */
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #ddd;
+  border: 1px solid #e0e0e0; /* Lighter border */
+  /* Softer, more spread-out shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); 
+  /* Slower, smoother transition */
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out; 
 }
 
 .employee-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-8px); /* Lift a bit more */
+  /* More pronounced shadow on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12); 
 }
 
 .employee-card img {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px; /* beige border around photo */
+  border-radius: 50%; /* Keep it circular */
+  margin-bottom: 20px;
+  /* ADD THIS BORDER for the ring effect */
+  border: 4px solid #f0f0f0; /* Light grey ring, adjust color/width as needed */
+  box-shadow: 0 7px 10px rgba(0,0,0,0.1); /* Optional: subtle shadow on image */
 }
 
 .employee-card h3 {
-  font-size: 16px;
+  font-size: 1.1rem; /* Slightly larger name */
   font-weight: 600;
-  color: #000000; /* brown highlight */
-  margin: 8px 0 4px;
+  color: #333; /* Darker grey instead of pure black */
+  margin: 10px 0 5px;
 }
 
 .employee-card p {
-  font-size: 14px;
-  color: #555;
+  font-size: 0.9rem; /* Slightly smaller text */
+  color: #666; /* Lighter grey */
   margin: 0;
+  line-height: 1.4;
 }
+
+
+
 
 .view-profile {
   display: inline-flex;       /* use flex to align icon + text */
@@ -1237,11 +1562,122 @@ html {
 
 
 
+.logo-school-connect {
+  height: 30px !important; /* Adjust this value as needed */
+}
+
+
+
+
+/* --- Styling for the "OTHER CODE PROGRAMS" node --- */
+
+
+/* --- Make the 'OTHER CODE PROGRAMS' node smaller --- */
+
+.node-department.teal {
+  min-width: 160px; /* Set a specific smaller width */
+  padding: 40px 10px 25px 10px; /* Adjust padding to be more compact */
+}
+
+/* Adjust the text inside the colored top to fit */
+.node-department.teal::before {
+  content: 'OTHER CODE PROGRAMS';
+  font-size: 13px; /* Smaller font to fit the new size */
+  font-weight: bold;
+  color: white;
+  padding-top: 5px; /* Adjust vertical position of the text */
+  line-height: 1.2; /* Allow text to wrap cleanly */
+  white-space: normal;
+}
+
+.node-department.webpg::before {
+  content: 'Web-Enabled PG Programs';
+  font-size: 13px; /* Smaller font to fit the new size */
+  font-weight: bold;
+  color: white;
+  padding-top: 5px; /* Adjust vertical position of the text */
+  line-height: 1.2; /* Allow text to wrap cleanly */
+  white-space: normal;
+}
+
+.node-department.bs::before {
+  content: 'BS DEGREE';
+  font-size: 13px; /* Smaller font to fit the new size */
+  font-weight: bold;
+  color: white;
+  padding-top: 5px; /* Adjust vertical position of the text */
+  line-height: 1.2; /* Allow text to wrap cleanly */
+  white-space: normal;
+} 
+.node-department.nptel::before {
+  content: 'NPTEL';
+  font-size: 13px; /* Smaller font to fit the new size */
+  font-weight: bold;
+  color: white;
+  padding-top: 5px; /* Adjust vertical position of the text */
+  line-height: 1.2; /* Allow text to wrap cleanly */
+  white-space: normal;
+}
+.node-department.teal img {
+  width: 50px; /* Set logo size */
+  height: 50px;
+  margin-top: 10px; /* Adjust spacing */
+}
+
+
+
+
+
+
+
+/* --- Generic Program Node Style --- */
+.node-program {
+    border: 3px solid #921F45; /* Using the same color for all */
+    padding: 30px 10px 10px 10px;
+    min-width: 160px;
+    flex-direction: column; /* Ensure image is above text if any */
+}
+.node-program::before {
+    background: #921F45; /* Using the same color for all */
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    padding-top: 5px;
+    line-height: 1.2;
+    white-space: normal;
+}
+.node-program img {
+    width: 50x !important;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.node-program.pg img {
+    width: 60x !important;
+    height: 55px;
+    margin-top: 10px;
+}
+
+
+/* --- Specific Program Titles for the Banner --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .org-chart { text-align: center; display: inline-block;}
 .org-chart ul { padding-top: 20px; position: relative; display: flex; justify-content: flex; }
-.org-chart li { list-style-type: none; position: relative; padding: 20px 10px 0 10px; display: flex; flex-direction: column; align-items: center; }
+.org-chart li { list-style-type: none; position: relative; padding: 20px 20px 0 20px; display: flex; flex-direction: column; align-items: center; }
 
 /* --- Connector Lines --- */
 .org-chart li::before, .org-chart li::after { content: ''; position: absolute; top: 0; right: 50%; border-top: 2px solid #7a2017; width: 50%; height: 40px; }
@@ -1253,18 +1689,18 @@ html {
 .org-chart ul ul::before { content: ''; position: absolute; top: 0; left: 50%; border-left: 2px solid #7a2017; width: 0; height: 20px; }
 
 /* Apply the circle only to nodes that are NOT top-level or department nodes */
-.org-node:not(.node-top-level):not(.node-department)::before {
+.org-node:not(.node-top-level):not(.node-department):not(.no-connector-circle)::before {
   content: '';
   position: absolute;
-  top: -10px; /* Position it halfway onto the connector line */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px; /* Size of the circle */
-  height: 10px; /* Size of the circle */
-  background-color: #fcfcfc; /* Same as your page background */
-  border: 2px solid #7a2017; /* Same as your connector line color */
-  border-radius: 50%; /* Makes it a circle */
-  z-index: 2; /* Ensure it's on top of the lines */
+  top: 50%; /* Vertically center */
+  left: 0;   /* Position on the left edge */
+  transform: translate(-50%, -50%); /* Center it perfectly on the edge */
+  width: 10px;
+  height: 10px;
+  background-color: #fcfcfc;
+  border: 2px solid #7a2017;
+  border-radius: 50%;
+  z-index: 2;
 }
 
 /* We no longer need this rule as the one above handles it */
@@ -1278,21 +1714,21 @@ html {
 .org-node { display: flex; align-items: center; justify-content: center; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.07); text-decoration: none; color: #333; position: relative; background: white; padding: 10px; z-index: 1; }
 
 /* --- Specific Node Styles --- */
-.node-top-level { border: 3px solid #7a2017; padding: 55px 25px 20px 25px; min-width: 150px; flex-direction: column; }
-.node-top-level::before { content: 'CODE'; position: absolute; top: 0; left: 0; right: 0; background: #7a2017; color: white; font-weight: bold; padding: 10px; border-top-left-radius: 17px; border-top-right-radius: 17px; clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%); }
+.node-top-level { border: 3px solid #630507; padding: 55px 25px 20px 25px; min-width: 150px; flex-direction: column; }
+.node-top-level::before { content: 'CODE'; position: absolute; top: 0; left: 0; right: 0; background: #630507; color: white; font-weight: bold; padding: 10px; border-top-left-radius: 17px; border-top-right-radius: 17px; clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%); }
 .node-top-level img { width: 66px; height: 66px; }
 
-.node-department { padding: 35px 20px 10px 20px; min-width: 150px; }
-.node-department .node-title { font-weight: 500; font-size: 14px; }
+.node-department { padding: 35px 20px 30px 20px; min-width: 150px; }
+.node-department .node-title { font-weight: 500; font-size: 16px; }
 .node-department::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 30px; border-top-left-radius: 17px; border-top-right-radius: 17px; clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%); }
 .node-department .node-icon { position: absolute; top: 5px; left: 15px; }
-.node-department.purple { border: 3px solid #9100bd; }
-.node-department.purple::before { background: #9100bd; }
-.node-department.teal { border: 3px solid #14b3cf; }
-.node-department.teal::before { background: #14b3cf; }
+.node-department.purple { border: 3px solid #83090b; }
+.node-department.purple::before { background: #83090b; }
+.node-department.teal { border: 3px solid #921F45; }
+.node-department.teal::before { background: #921F45; }
 
 .node-team-logo { border: none; box-shadow: none; background: transparent; }
-.node-team-logo img { height: 60px; width: auto; }
+.node-team-logo img { height: 70px; width: auto; }
 
 .node-subteam, .node-function { border: 2px solid #99e2ff; color: #555; padding: 10px 15px; border-radius: 25px; flex-direction: row; }
 .node-subteam img, .node-function img { width: 16px; height: 16px; margin-right: 6px; }
@@ -1303,8 +1739,8 @@ a.node-subteam:hover, a.node-function:hover { background: #99e2ff; color: white;
 .node-account-nptel { border: 3px solid #ff9d9d; padding: 15px; border-radius: 20px 20px 50% 50%; }
 .node-account-nptel img { width: 40px; height: auto; }
 
-.node-exam a { border: 2px solid #99e2ff; color: #555; padding: 10px 25px; text-decoration: none; border-radius: 25px; display: block; background: white; }
-.node-exam a:hover { background: #99e2ff; color: white; }
+.node-exam a { border: 2px solid #b82361; color: #555; padding: 10px 25px; text-decoration: none; border-radius: 25px; display: block; background: white; }
+.node-exam a:hover { background: #b82361; color: white; }
 
 /* ... etc for other nodes ... */
 
@@ -1317,7 +1753,7 @@ a.node-subteam:hover, a.node-function:hover { background: #99e2ff; color: white;
 .org-chart ul.vertical-list {
   display: block;
   position: relative;
-  padding-left: 30px;
+  padding-left: 25px;
 }
 
 /* We don't need the pseudo-element on the UL anymore */
@@ -1330,7 +1766,7 @@ a.node-subteam:hover, a.node-function:hover { background: #99e2ff; color: white;
   display: block;
   position: relative;
   padding: 15px 0 0 20px; /* Indent the node from the line channel */
-  text-align: left;
+  text-align: center;
 }
 
 /* This ::before creates the HORIZONTAL line for each item */
@@ -1352,7 +1788,7 @@ a.node-subteam:hover, a.node-function:hover { background: #99e2ff; color: white;
   position: absolute;
   top: 0;
   left: 0; /* Aligns with the start of the horizontal line */
-  width: 2px;
+  width: 0;
   height: 100%; /* Spans the full height of the list item */
   background-color: #7a2017;
 }
@@ -1365,7 +1801,7 @@ a.node-subteam:hover, a.node-function:hover { background: #99e2ff; color: white;
 /* For the LAST item, end the vertical line at the T-junction */
 .org-chart ul.vertical-list li:last-child::after {
   height: 35px;
-  width: 4px; 
+  width: 2px; 
 }
 
 
