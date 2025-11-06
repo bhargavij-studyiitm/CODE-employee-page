@@ -170,6 +170,115 @@ html {
   transform: scale(1.03); /* Slightly zooms the image in */
 }
 
+
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  height: 400px; /* adjust as needed */
+}
+
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-carousel .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner-carousel .slide.active {
+  opacity: 1;
+}
+
+.banner-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes slideFade {
+  0% { opacity: 0; transform: translateX(20%); }
+  5%, 30% { opacity: 1; transform: translateX(0); }
+  35%, 100% { opacity: 0; transform: translateX(-20%); }
+}
+
+/* Total cycle = 12s (4s per image) */
+.banner-carousel .slide:nth-child(1) {
+  animation: slideFade 9s infinite;
+  animation-delay: 0s;
+}
+.banner-carousel .slide:nth-child(2) {
+  animation: slideFade 9s infinite;
+  animation-delay: 3s;
+}
+.banner-carousel .slide:nth-child(3) {
+  animation: slideFade 9s infinite;
+  animation-delay: 6s;
+}
+
+/* Smooth timing curve */
+.banner-carousel .slide {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 🛑 Pause animation when hovered */
+.banner-carousel:hover .slide {
+  animation-play-state: paused;
+}
+
+/* ---- Dots (below carousel) ---- */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;                /* distance from bottom of banner */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carousel-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: dotCycle 9s infinite;
+}
+
+/* Dots animate in sync with slides (3s each) */
+.carousel-dots .dot:nth-child(1) { animation-delay: 0s; }
+.carousel-dots .dot:nth-child(2) { animation-delay: 3s; }
+.carousel-dots .dot:nth-child(3) { animation-delay: 6s; }
+
+/* Active dot effect */
+@keyframes dotCycle {
+  0%, 5%, 25% {
+    background: white;
+    transform: scale(1.3);
+  }
+  30%, 100% {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1);
+  }
+}
+
+/* Pause dots when hovering over the carousel */
+.banner-carousel:hover .dot {
+  animation-play-state: paused;
+}
+
+
+
+
+
+
+
+
 .about-section {
   display: flex;
   justify-content: center;
@@ -442,7 +551,51 @@ html {
 
 
 
+.function-leads-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* Force 4 columns */
+  gap: 20px !important;
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  padding: 25px 0 !important;
+  /* REMOVE or set justify-items to stretch for default behavior */
+  justify-items: stretch !important; 
+}
 
+/* Base card style within this grid */
+.function-leads-grid .employee-card {
+  /* Remove justify-self from the general card style if present */
+  /* justify-self: center !important; */ 
+  width: 200px !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+
+/* --- Centering the last 3 cards in the 4-column grid --- */
+
+/* --- Centering the last 3 cards in the 4-column grid --- */
+
+/* Card 9 (Sripriya) - Span columns 1-2, force to row 4 */
+.function-leads-grid .employee-card:nth-child(9) {
+    grid-column: 1 / 3 !important;
+    justify-self: center !important;
+    grid-row-start: 4 !important; /* Force to row 4 */
+}
+
+/* Card 10 (Sangeetha) - Span columns 2-3, force to row 4 */
+.function-leads-grid .employee-card:nth-child(10) {
+    grid-column: 2 / 4 !important;
+    justify-self: center !important;
+    grid-row-start: 4 !important; /* ADD THIS LINE */
+}
+
+/* Card 11 (Rajalakshmi) - Span columns 3-4, force to row 4 */
+.function-leads-grid .employee-card:nth-child(11) {
+    grid-column: 3 / 5 !important;
+    justify-self: center !important; /* Changed from 'start' to 'center' */
+    grid-row-start: 4 !important; /* ADD THIS LINE */
+}
 
 /* --- CODE Teamwise Leadership Specific Grid Layout (Forceful) --- */
 
@@ -1293,6 +1446,11 @@ html {
 
 
 
+
+
+
+
+
 /* --- NEW TEAM MEMBER PROFILE MODAL STYLING --- */
 
 #profileDetailModal.profile-detail-modal {
@@ -1675,8 +1833,25 @@ html {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .org-chart { text-align: center; display: inline-block;}
-.org-chart ul { padding-top: 20px; position: relative; display: flex; justify-content: flex; }
+.org-chart ul { padding-top: 20px; position: relative; display: flex; justify-content: center ; justify-content: flex; }
 .org-chart li { list-style-type: none; position: relative; padding: 20px 20px 0 20px; display: flex; flex-direction: column; align-items: center; }
 
 /* --- Connector Lines --- */
@@ -1751,9 +1926,15 @@ a.node-subteam:hover, a.node-function:hover { background: #99e2ff; color: white;
 
 /* The parent list. We add padding on the left to create a "channel" for the lines. */
 .org-chart ul.vertical-list {
-  display: block;
+  display: block !important ;
   position: relative;
   padding-left: 25px;
+}
+
+.org-chart ul.vertical-list li {
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 /* We don't need the pseudo-element on the UL anymore */
@@ -1805,8 +1986,236 @@ a.node-subteam:hover, a.node-function:hover { background: #99e2ff; color: white;
 }
 
 
+/* --- Hover Animation for Main Program Nodes --- */
+.org-node.node-department,
+.org-node.node-program {
+  transition: all 0.25s ease-in-out;
+  transform-origin: center;
+}
+
+/* Lift effect on hover or focus */
+.org-node.node-department:hover,
+.org-node.node-department:focus,
+.org-node.node-program:hover,
+.org-node.node-program:focus {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 5; /* bring above connector lines */
+}
+
+/* Optional: add a slight glowing border for clarity */
+.org-node.node-department:hover::before,
+.org-node.node-program:hover::before {
+  box-shadow: 0 0 10px rgba(146, 31, 69, 0.4);
+}
+
+/* Optional: smooth hover-in and hover-out shadow transition */
+.org-node.node-department img,
+.org-node.node-program img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.org-node.node-department:hover img,
+.org-node.node-program:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+
 
 /* ... All your other .node- styles like .node-department, .node-subteam, etc. ... */
+
+
+
+
+
+
+/* --- Program Stats Section --- */
+.program-stats-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Main container */
+.stats-panel {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 50px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.stats-panel:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+/* Placeholder text before selection */
+.stats-placeholder {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  letter-spacing: 0.3px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* --- Stat Cards --- */
+.stats-card {
+  display: none;
+  animation: fadeIn 0.6s ease;
+  border-top: 4px solid #921F45;
+  border-radius: 16px;
+  background: #fff;
+  padding: 30px 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+
+.stats-card.is-visible {
+  display: block;
+  animation: cardSlideIn 0.6s ease forwards;
+}
+
+/* Hide placeholder when active */
+.stats-panel.has-selection .stats-placeholder {
+  display: none;
+}
+
+/* --- Header --- */
+.stats-card h3 {
+  font-size: 1.8rem;
+  color: #7a2017;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 2px solid #e3d9dc;
+  padding-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* --- Horizontal Stats Container --- */
+.stats-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px;
+  margin-top: 20px;
+  animation: fadeIn 0.8s ease;
+}
+
+/* --- Individual Stat Boxes --- */
+.stat-box {
+  flex: 1;
+  background: linear-gradient(180deg, #921F45 0%, #6d1333 100%);
+  color: #fff;
+  text-align: center;
+  border-radius: 14px;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.stat-box:hover::before {
+  opacity: 1;
+}
+
+/* --- Hover Animation --- */
+.stat-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: linear-gradient(180deg, #a12b56 0%, #7b173b 100%);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Text Styling --- */
+.stat-box h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.stat-box p {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #fff;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.stat-box:hover p {
+  transform: scale(1.1);
+}
+
+/* --- Close Button --- */
+.stats-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.6rem;
+  color: #bbb;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.stats-close-btn:hover {
+  color: #fff;
+  background: #921F45;
+  transform: rotate(90deg);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cardSlideIn {
+  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .stats-horizontal {
+    flex-direction: column;
+  }
+
+  .stat-box {
+    padding: 40px 20px;
+  }
+
+  .stat-box p {
+    font-size: 1.6rem;
+  }
+}
+
+
 
 
 

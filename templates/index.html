@@ -2,8 +2,26 @@
 {% block content %}
 
 
-<section  id="home" class="hero-banner">
-  <img src="{{ url_for('static', filename='images/hero-banner.jpg') }}" alt="Banner">
+<section id="home" class="hero-banner">
+  <div class="banner-carousel">
+    <div class="slide active">
+      <img src="{{ url_for('static', filename='images/hero-banner.jpg') }}" alt="Banner 1">
+    </div>
+    <div class="slide">
+      <img src="{{ url_for('static', filename='images/hero-banner-2.jpg') }}" alt="Banner 2">
+    </div>
+    <div class="slide">
+      <img src="{{ url_for('static', filename='images/hero-banner-3.jpg') }}" alt="Banner 3">
+    </div>
+  </div>
+
+
+
+  <div class="carousel-dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 </section>
 
 
@@ -323,7 +341,7 @@
 
   <div class="accordion-item">
     <button class="accordion-header">
-      CODE Team Leads
+      CODE Program Leads
       <span class="accordion-icon">+</span>
     </button>
     <div class="accordion-content">
@@ -360,18 +378,9 @@
         <div class="employee-card">
           <img src="{{ url_for('static', filename='images/kamala.jpg') }}" alt="Kamala">
           <h3>Kamala Ramakrishnan</h3>
-          <p style="color: black;">School Connect and CODE Chapters</p>
+          <p style="color: black;">CODE Programs</p>
           <p>IIT Madras</p>
           <a href="#" class="view-profile" data-employee="kamala">
-            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
-          </a>
-        </div>
-        <div class="employee-card">
-          <img src="{{ url_for('static', filename='images/jayakrishnan.jpg') }}" alt="Dr. Jayakrishnan">
-          <h3>Dr. Jayakrishnan</h3>
-          <p style="color: black;">Head,Education and Technology</p>
-          <p>IIT Madras</p>
-          <a href="#" class="view-profile" data-employee="jayakrishnan">
             <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
           </a>
         </div>
@@ -386,64 +395,146 @@
             <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
           </a>
         </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <button class="accordion-header">
+      CODE Functional Leads
+      <span class="accordion-icon">+</span>
+    </button>
+    <div class="accordion-content">
+      <div class="container function-leads-grid">
 
         <div class="employee-card">
-          <img src="{{ url_for('static', filename='images/arun.jpg') }}" alt="Arun">
+          <img src="{{ url_for('static', filename='images/jayakrishnan.jpg') }}" alt="Jane Smith">
+          <h3>Dr. Jayakrishnan</h3>
+          <p style="color: black;">Education and Technology</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="jayakrishnan">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/thejesh.jpg') }}" alt="Jane Smith">
+          <h3>Thejesh GN</h3>
+          <p style="color: black;">Workflow Team</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="jayakrishnan">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/rishav.jpg') }}" alt="Jane Smith">
+          <h3>Rishav Thakker</h3>
+          <p style="color: black;">SEEK Portal</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="jayakrishnan">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/karuppasamy.jpeg') }}" alt="Jane Smith">
+          <h3>Karuppasamy</h3>
+          <p style="color: black;">CODE Tech Head</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="jayakrishnan">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/jayabala.jpg') }}" alt="Jane Smith">
+          <h3>Jayabala</h3>
+          <p style="color: black;">CSR</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="arun">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>  
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/arun.jpg') }}" alt="Jane Smith">
           <h3>Arun Ramachandran</h3>
           <p style="color: black;">Marketing</p>
           <p>IIT Madras</p>
           <a href="#" class="view-profile" data-employee="arun">
-            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
           </a>
-        </div>
-
+        </div>  
 
         <div class="employee-card">
-          <img src="{{ url_for('static', filename='images/anitha.jpg') }}" alt="Anitha">
+          <img src="{{ url_for('static', filename='images/anitha.jpg') }}" alt="Jane Smith">
           <h3>M Anitha</h3>
           <p style="color: black;">Exam</p>
           <p>IIT Madras</p>
           <a href="#" class="view-profile" data-employee="anitha">
-            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
-          </a>
-        </div>
-        <div class="employee-card">
-          <img src="{{ url_for('static', filename='images/aarthi.jpg') }}" alt="Aarthi">
-          <h3>Aarthi Janet G</h3>
-          <p style="color: black;">LC/SPOC</p>
-          <p>IIT Madras</p>
-          <a href="#" class="view-profile" data-employee="aarthi"> <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
           </a>
         </div>
 
         <div class="employee-card">
-          <img src="{{ url_for('static', filename='images/sripriya.jpg') }}" alt="Sripriya">
-          <h3>Sripriya</h3>
-          <p style="color: black;">Accounts</p>
-          <p>IIT Madras</p>
-          <a href="#" class="view-profile" data-employee="sripriya">
-            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
-          </a>
-        </div>
-        <div class="employee-card">
-          <img src="{{ url_for('static', filename='images/sangeetha.jpg') }}" alt="Sangeetha">
-          <h3>Azhagu Sangeetha P K</h3>
-          <p style="color: black;">Accounts</p>
-          <p>IIT Madras</p>
-          <a href="#" class="view-profile" data-employee="sangeetha">
-            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
-          </a>
-        </div>
-        <div class="employee-card">
-          <img src="{{ url_for('static', filename='images/pradeepa.jpg') }}" alt="Pradeepa">
+          <img src="{{ url_for('static', filename='images/pradeepa.jpg') }}" alt="Jane Smith">
           <h3>Pradeepa S</h3>
           <p style="color: black;">Studio</p>
           <p>IIT Madras</p>
           <a href="#" class="view-profile" data-employee="pradeepa">
-            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon"> View Profile
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
           </a>
         </div>
 
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/sripriya.jpeg') }}" alt="Jane Smith">
+          <h3>Sripriya</h3>
+          <p style="color: black;">Accounts</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="sripriya">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/employee.png') }}" alt="Jane Smith">
+          <h3>Azhagu Sangeetha P K</h3>
+          <p style="color: black;">Accounts</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="sangeetha">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+        <div class="employee-card">
+          <img src="{{ url_for('static', filename='images/rajalakshmi.jpg') }}" alt="Jane Smith">
+          <h3>Rajalakshmi</h3>
+          <p style="color: black;">Accounts Manager</p>
+          <p>IIT Madras</p>
+          <a href="#" class="view-profile" data-employee="jayakrishnan">
+            <img src="{{ url_for('static', filename='images/profile.svg') }}" alt="Profile Icon" class="profile-icon">
+            View Profile
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
 
 
       </div>
@@ -480,7 +571,7 @@
           <!-- remove ❝ since we now use the SVG -->
           <h2 id="modalName"></h2>
           <p class="role" id="modalRole"></p>
-          <p id="modalDesc"></p>
+          <p id="modalDesc" style="white-space: pre-line;"></p>
         </div>
       </div>
     </div>
@@ -500,74 +591,105 @@
   </h2>
 </section>
 
+
 <section id="orgchartwrapper" class="org-chart-wrapper">
   <div class="org-chart">
     <ul>
       <li>
+        <!-- MAIN CODE NODE -->
         <div class="org-node node-top-level">
           <img src="{{ url_for('static', filename='images/logo-main.png') }}" alt="CODE Logo">
         </div>
+
         <ul>
+          <!-- PROGRAMS NODE -->
           <li>
             <div class="org-node node-department purple">
               <span class="node-title">PROGRAMS</span>
             </div>
             <ul>
+              <!-- BS DEGREE -->
               <li>
-                <div class="org-node node-department bs node-program bs no-connector-circle">
+                <a href="#program-stats" 
+                  class="org-chart-link org-node node-department bs node-program bs no-connector-circle" 
+                  data-program="bs">
                   <img src="{{ url_for('static', filename='images/logo-bs-degree.png') }}" alt="IITM BS Degree Logo">
-                </div>
+                </a>
                 <ul class="vertical-list">
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="POD Ops">Support</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Portal">Portal</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Tech & Data">Tech & Data</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Course Instructor">Instructors</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="IIC">IIC</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Student affairs">Student Affairs</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree - Support">Support</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree - Portal">Portal</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree - Tech and Data">Tech and Data</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree - Instructors">Instructors</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree - IIC">IIC</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree - Student Affairs">Student Affairs</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="BS Degree - CODE Chapters">CODE Chapters</a></li>
                 </ul>
               </li>
+
+              <!-- NPTEL -->
               <li>
-                <div class="org-node node-department NPTEL node-program nptel no-connector-circle">
-                   <img src="{{ url_for('static', filename='images/logo-nptel.png') }}" alt="NPTEL Logo">
-                </div>
+                <a href="#program-stats" 
+                  class="org-chart-link org-node node-department NPTEL node-program nptel no-connector-circle" 
+                  data-program="nptel">
+                  <img src="{{ url_for('static', filename='images/logo-nptel.png') }}" alt="NPTEL Logo">
+                </a>
                 <ul class="vertical-list">
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="NPTEL Support">Support</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Portal">Portal</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Local chapter">Local Chapter</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="NPTEL - Support">Support</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="NPTEL - Portal">Portal</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="NPTEL - Local Chapter">Local Chapter</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="NPTEL - Tech">Tech Team</a></li>
                 </ul>
               </li>
+
+              <!-- WMT (PG) -->
               <li>
-                <div class="org-node node-department webpg node-program pg no-connector-circle "> 
+                <a href="#program-stats" 
+                  class="org-chart-link org-node node-department webpg node-program pg no-connector-circle" 
+                  data-program="wmt">
                   <img src="{{ url_for('static', filename='images/logo-pg.png') }}" alt="PG Logo">
-                </div>
+                </a>
                 <ul class="vertical-list">
-                   <li><a href="#team-section" class="org-node node-subteam" data-team="Support">Support</a></li>
-                   <li><a href="#team-section" class="org-node node-subteam" data-team="Portal">Portal</a></li>
-                   <li><a href="#team-section" class="org-node node-subteam" data-team="Industry relationships & Outreach">Industry Relationships & Outreach</a></li> </ul>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="WMT - Support and Portal">Support and Portal</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="WMT - Course Management">Course Management</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="WMT - Industry Relationship">Industry Relationship</a></li>
+                </ul>
               </li>
+
+              <!-- OTHER CODE PROGRAMS -->
               <li>
-                <div class="org-node node-department teal">
-                  <img src="{{ url_for('static', filename='images/logo-main.png') }}" alt="code Logo">
-                </div>
+                <a href="#program-stats" 
+                  class="org-chart-link org-node node-department teal" 
+                  data-program="other">
+                  <img src="{{ url_for('static', filename='images/logo-main.png') }}" alt="CODE Logo">
+                </a>
                 <ul class="vertical-list">
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="School Connect Team">School Connect</a></li>
-                  <li><a href="#team-section" class="org-node node-subteam" data-team="Executive Education">Executive Education</a></li> <li><a href="#team-section" class="org-node node-subteam" data-team="Code ex/workshops">Workshops</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="School Connect">School Connect</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Executive Education">Executive Education</a></li>
+                  <li><a href="#team-section" class="org-node node-subteam" data-team="Workshops">Workshops</a></li>
                   <li><a href="#team-section" class="org-node node-subteam" data-team="ICMAI">ICMAI</a></li>
                 </ul>
               </li>
             </ul>
           </li>
+
+          <!-- FUNCTIONS NODE -->
           <li>
-            <div class="org-node node-department purple">
+            <a href="#program-stats" 
+              class="org-chart-link org-node node-department purple no-connector-circle" 
+              data-program="functions" 
+              data-tooltip="Function Teams support CODE Programs with over 70+ Employees">
               <span class="node-title">FUNCTIONS</span>
-            </div>
+            </a>
             <ul class="vertical-list">
-              <li><a href="#team-section" class="org-node node-function" data-team="CODE - Accounts">Accounts</a></li>
-              <li><a href="#team-section" class="org-node node-function" data-team="CODE Marketing">Marketing</a></li>
-              <li><a href="#team-section" class="org-node node-function" data-team="TEXT / TRANSLATION">Translation & Transcription</a></li> 
-              <li><a href="#team-section" data-team="LC + Exam" class="org-node node-function">Exam</a></li>              
-              <li><a href="#team-section" class="org-node node-function" data-team="Studio Team">Studio</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="Accounts">Accounts</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="Marketing">Marketing</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="Translation and Transcription">Translation & Transcription</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="Exam">Exam</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="Studio">Studio</a></li>
               <li><a href="#team-section" class="org-node node-function" data-team="CSR">CSR</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="Tech team">Tech Team</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="SEEK">SEEK Portal</a></li>
+              <li><a href="#team-section" class="org-node node-function" data-team="Workflow">Workflow</a></li>
             </ul>
           </li>
         </ul>
@@ -578,6 +700,137 @@
 
 
 
+
+
+
+<section id="program-stats" class="program-stats-section">
+  <div class="stats-container">
+    
+    <div id="stats-panel" class="stats-panel">
+
+      <div class="stats-placeholder">
+        <h3>Program Statistics</h3>
+        <p>Click a program in the chart above to see its details.</p>
+      </div>
+
+      <div class="stats-card" data-program="bs">
+        <button class="stats-close-btn">&times;</button>
+        <h3>BS Degree Program</h3>
+          <div class="stats-horizontal">
+            <div class="stat-box">
+              <h4>Students</h4>
+              <p>47000+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Number of Courses</h4>
+              <p>80+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Employees</h4>
+              <p>115+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Revenue Share</h4>
+              <p>33%</p>
+            </div>
+
+
+          </div>
+      </div>
+
+      <div class="stats-card" data-program="nptel">
+        <button class="stats-close-btn">&times;</button>
+        <h3>NPTEL Program</h3>
+          <div class="stats-horizontal">
+            <div class="stat-box">
+              <h4>Students</h4>
+              <p>3.5 Crore+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Number of Courses</h4>
+              <p>9000+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Employees</h4>
+              <p>45+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Revenue Share</h4>
+              <p>52%</p>
+            </div>
+
+
+          </div>
+
+      </div>
+
+      <div class="stats-card" data-program="wmt">
+        <button class="stats-close-btn">&times;</button>
+        <h3>Web-Enabled PG Programs</h3>
+          <div class="stats-horizontal">
+            <div class="stat-box">
+              <h4>Students</h4>
+              <p>1,200+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Number of Programs</h4>
+              <p>9</p>
+            </div>
+            <div class="stat-box">
+              <h4>Employees</h4>
+              <p>6+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Revenue Share</h4>
+              <p>5%</p>
+            </div>
+
+
+          </div>
+      </div>
+
+      <div class="stats-card" data-program="other">
+        <button class="stats-close-btn">&times;</button>
+        <h3>Other CODE Programs</h3>
+          <div class="stats-horizontal">
+            <div class="stat-box">
+              <h4>Students</h4>
+              <p>1.5 Lakh +</p>
+            </div>
+            <div class="stat-box">
+              <h4>Number of Programs</h4>
+              <p>50+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Employees</h4>
+              <p>15+</p>
+            </div>
+            <div class="stat-box">
+              <h4>Revenue Share</h4>
+              <p>10%</p>
+            </div>
+
+
+          </div>
+
+      </div>
+
+
+<!-- FUNCTIONS STATS CARD -->
+      <div class="stats-card" data-program="functions">
+        <button class="stats-close-btn">&times;</button>
+        <h3>Functions</h3>
+        <div class="stats-horizontal">
+          <div class="stat-box single-box">
+            <p>Functional teams with over 70+ employees support all the CODE programs</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
 
 
 
@@ -661,50 +914,61 @@
         <ul class="sidebar-list" role="list">
           <li class="list-item active" data-team="ALL" role="listitem">ALL</li>
 
-          <li class="list-item" data-team="POD Ops" role="listitem">BS Degree - Support</li>
-          <li class="list-item" data-team="Portal" role="listitem">BS Degree - Portal</li>
-          <li class="list-item" data-team="Tech & Data" role="listitem">Tech and Data</li>
-          <li class="list-item" data-team="Course Instructor" role="listitem">Course Instructors</li>
-          <li class="list-item" data-team="IIC" role="listitem">IIC</li>
-          <li class="list-item" data-team="Student affairs" role="listitem">Student Affairs</li>
-          
-          <li class="list-item" data-team="NPTEL Support" role="listitem">NPTEL- Support</li>
-          <li class="list-item" data-team="Portal" role="listitem">NPTEL- Portal</li>
-          <li class="list-item" data-team="Local chapter" role="listitem">Local Chapter</li>
-          
-          <li class="list-item" data-team="Support" role="listitem">WMT - Support</li>
-          <li class="list-item" data-team="Portal" role="listitem">WMT - Portal</li>
-          <li class="list-item" data-team="Industry relationships & Outreach" role="listitem">Industry Relationships & Outreach</li>
+          <!-- BS Degree -->
+          <li class="list-item" data-team="BS Degree - Support" role="listitem">BS Degree - Support</li>
+          <li class="list-item" data-team="BS Degree - Portal" role="listitem">BS Degree - Portal</li>
+          <li class="list-item" data-team="BS Degree - Tech and Data" role="listitem">BS Degree - Tech and Data</li>
+          <li class="list-item" data-team="BS Degree - Instructors" role="listitem">BS Degree - Instructors</li>
+          <li class="list-item" data-team="BS Degree - IIC" role="listitem">BS Degree - IIC</li>
+          <li class="list-item" data-team="BS Degree - Student Affairs" role="listitem">BS Degree - Student Affairs</li>
+          <li class="list-item" data-team="BS Degree - CODE Chapters" role="listitem">BS Degree - CODE Chapters</li>
 
-          <li class="list-item" data-team="School Connect Team" role="listitem">School Connect</li>
+          <!-- NPTEL -->
+          <li class="list-item" data-team="NPTEL - Support" role="listitem">NPTEL - Support</li>
+          <li class="list-item" data-team="NPTEL - Portal" role="listitem">NPTEL - Portal</li>
+          <li class="list-item" data-team="NPTEL - Local Chapter" role="listitem">NPTEL - Local Chapter</li>
+          <li class="list-item" data-team="NPTEL - Tech" role="listitem">NPTEL - Tech</li>
+
+          <!-- WMT -->
+          <li class="list-item" data-team="WMT - Support and Portal" role="listitem">WMT - Support and Portal</li>
+          <li class="list-item" data-team="WMT - Course Management" role="listitem">WMT - Course Management</li>
+          <li class="list-item" data-team="WMT - Industry Relationship" role="listitem">WMT - Industry Relationship</li>
+
+          <!-- Other Programs -->
+          <li class="list-item" data-team="School Connect" role="listitem">School Connect</li>
           <li class="list-item" data-team="Executive Education" role="listitem">Executive Education</li>
-          <li class="list-item" data-team="Code ex/workshops" role="listitem">Workshops</li>
+          <li class="list-item" data-team="Workshops" role="listitem">Workshops</li>
           <li class="list-item" data-team="ICMAI" role="listitem">ICMAI</li>
 
-          <li class="list-item" data-team="ACCOUNTS_GROUP" role="listitem">Accounts</li>
-          <li class="list-item" data-team="MARKETING_GROUP" role="listitem">Marketing</li>
-          <li class="list-item" data-team="TRANSLATION_GROUP" role="listitem">Translation and Transcription</li>
-          <li class="list-item" data-team="EXAM_GROUP" role="listitem">Exam</li>
-
-          <li class="list-item" data-team="Studio Team" role="listitem">Studio</li>
+          <!-- Functional Teams -->
+          <li class="list-item" data-team="Accounts" role="listitem">Accounts</li>
+          <li class="list-item" data-team="Marketing" role="listitem">Marketing</li>
+          <li class="list-item" data-team="Translation and Transcription" role="listitem">Translation and Transcription</li>
+          <li class="list-item" data-team="Exam" role="listitem">Exam</li>
+          <li class="list-item" data-team="Studio" role="listitem">Studio</li>
           <li class="list-item" data-team="CSR" role="listitem">CSR</li>
+
+          <!-- Tech Teams -->
+          <li class="list-item" data-team="Tech team" role="listitem">Tech team</li>
+          <li class="list-item" data-team="SEEK" role="listitem">SEEK</li>
+          <li class="list-item" data-team="Workflow" role="listitem">Workflow</li>
         </ul>
     </div>
   </aside>
 
 
- 
+ <!-- employee jinja-->
 
   <main class="employee-grid-container">
     {% for emp in employees %}
-    <div class="employee-profile-card" data-team="{{ emp.team }}">
+    <div class="employee-profile-card" data-team="{{ emp.normalized_teamname }}">
       <div class="card-top-section">
         <div class="profile-image-wrapper">
           <img src="{{ emp.directPhotoURL }}" alt="{{ emp.fullName }}" class="profile-image">
         </div>
         <div class="profile-info">
           <h2 class="employee-name">{{ emp.fullName }}</h2>
-          <p class="employee-title">{{ emp.designation }}, {{ emp.team }}</p>
+          <p class="employee-title">{{ emp.designation }}, {{ emp.normalized_teamname }}</p>
           <div class="info-divider"></div>
           
           <a href="#" class="view-profile-link"
@@ -953,7 +1217,7 @@
 
     "kamala": {
       name: "Kamala Ramakrishnan",
-      role: "Other CODE Programs In-charge",
+      role: "CODE Programs",
       desc: "Kamala Ramakrishnan brings over 30 years of diverse professional experience across education, legal, and technical domains in India and the USA. At CODE, she leads the School Connect Program and CODE Chapters, while also overseeing certificate management for IITM BS graduates, MoUs with universities, and hiring operations. With a proven record of streamlining processes and building strong teams, many of today’s CODE leads were mentored under her guidance. Kamala’s leadership focuses on operational excellence, nurturing talent, and fostering partnerships that strengthen CODE’s outreach and execution. Her experience and adaptability make her a key pillar in managing multiple programs and institutional initiatives at CODE.",
       image: "{{ url_for('static', filename='images/kamala.jpg') }}"
     },
@@ -1333,6 +1597,59 @@ document.addEventListener("DOMContentLoaded", function () {
     // ... your other scripts ...
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    
+    const orgChartLinks = document.querySelectorAll('.org-chart-link');
+    const statsPanel = document.getElementById('stats-panel');
+    const statsCards = document.querySelectorAll('.stats-card');
+    const statsPlaceholder = document.querySelector('.stats-placeholder');
+    const closeButtons = document.querySelectorAll('.stats-close-btn');
+
+    // Function to show the correct stat card
+    function showStats(programName) {
+        // Hide all cards first
+        statsCards.forEach(card => card.classList.remove('is-visible'));
+        
+        // Find and show the matching card
+        const cardToShow = document.querySelector(`.stats-card[data-program="${programName}"]`);
+        if (cardToShow) {
+            cardToShow.classList.add('is-visible');
+            statsPanel.classList.add('has-selection'); // Hide the placeholder
+        }
+    }
+
+    // Function to reset/hide all cards
+    function hideAllStats() {
+        statsCards.forEach(card => card.classList.remove('is-visible'));
+        statsPanel.classList.remove('has-selection'); // Show the placeholder
+    }
+
+    // Add click listeners to org chart links
+    orgChartLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Stop the link from jumping
+            
+            const programName = this.getAttribute('data-program');
+            const targetSection = document.getElementById('program-stats');
+            
+            // Scroll to the stats section
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            
+            // Show the corresponding card
+            showStats(programName);
+        });
+    });
+
+    // Add click listeners to all close buttons
+    closeButtons.forEach(button => {
+        button.addEventListener('click', hideAllStats);
+    });
+    
+    // ... your other scripts ...
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const teamHeading = document.getElementById("team-name-heading");
@@ -1347,6 +1664,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
+
 
 
 </script>
